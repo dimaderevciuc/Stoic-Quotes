@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:csv/csv.dart';
-
+import 'package:stoic_quotes/FavoritesScreen.dart';
 class QuotesScreen extends StatefulWidget {
   const QuotesScreen({super.key});
 
@@ -59,6 +59,15 @@ class _QuotesScreenState extends State<QuotesScreen> {
     });
   }
 
+  void openFavorites() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => FavoritesScreen(favorites: favoriteQuotes),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -98,8 +107,7 @@ class _QuotesScreenState extends State<QuotesScreen> {
                             '-${quotes[currIndex]['author'] ?? ''}-',
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                                fontSize: 18,
-                                color: Colors.amber[300]),
+                                fontSize: 18, color: Colors.amber[300]),
                           ),
                         ],
                       ),
