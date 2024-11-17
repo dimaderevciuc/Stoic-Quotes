@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:csv/csv.dart';
@@ -92,7 +94,7 @@ class _QuotesScreenState extends State<QuotesScreen> {
         backgroundColor: Colors.black87,
         actions: [
           PopupMenuButton<String>(
-            color: Colors.black,
+            color: Colors.black87,
             iconColor: Colors.amber[600],
             onSelected: (value) {
               if (value == 'Favorites') {
@@ -134,7 +136,7 @@ class _QuotesScreenState extends State<QuotesScreen> {
                       child: Column(
                         children: [
                           Text(
-                            quotes[currIndex]['quote'] ?? '',
+                            quotes[Random().nextInt(quotes.length)]['quote'] ?? '',
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 fontSize: 24,
@@ -144,7 +146,7 @@ class _QuotesScreenState extends State<QuotesScreen> {
                           ),
                           SizedBox(height: 10),
                           Text(
-                            '-${quotes[currIndex]['author'] ?? ''}-',
+                            '-${quotes[Random().nextInt(quotes.length)]['author'] ?? ''}-',
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 fontSize: 18, color: Colors.amber[300]),
