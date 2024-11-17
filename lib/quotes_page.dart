@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:csv/csv.dart';
 import 'package:stoic_quotes/FavoritesScreen.dart';
+import 'package:stoic_quotes/ContactsScreen.dart';
+
 class QuotesScreen extends StatefulWidget {
   const QuotesScreen({super.key});
 
@@ -68,6 +70,15 @@ class _QuotesScreenState extends State<QuotesScreen> {
     );
   }
 
+  void openContactInfo() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => ContactsScreen(),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -79,6 +90,35 @@ class _QuotesScreenState extends State<QuotesScreen> {
             color: Colors.amber[600],
             fontSize: 17),
         backgroundColor: Colors.black87,
+        actions: [
+          PopupMenuButton<String>(
+            color: Colors.black,
+            iconColor: Colors.amber[600],
+            onSelected: (value) {
+              if (value == 'Favorites') {
+                openFavorites();
+              } else if (value == 'Contact') {
+                openContactInfo();
+              }
+            },
+            itemBuilder: (BuildContext context) => [
+              PopupMenuItem(
+                value: 'Favorites',
+                child: Text(
+                  'Favorites',
+                  style: TextStyle(color: Colors.amber[600]),
+                ),
+              ),
+              PopupMenuItem(
+                value: 'Contact',
+                child: Text(
+                  'Contact',
+                  style: TextStyle(color: Colors.amber[600]),
+                ),
+              ),
+            ],
+          ),
+        ],
       ),
       body: Center(
         child: quotes.isEmpty

@@ -8,13 +8,15 @@ class FavoritesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Colors.black,
         appBar: AppBar(
           title: const Text('Favourites'),
-          backgroundColor: Colors.black,
+          backgroundColor: Colors.amber[600],
         ),
         body: favorites.isEmpty
-            ? const Center(
-                child: Text('No favorites yet!'),
+            ? Center(
+                child: Text('No favorites yet!',
+                    style: TextStyle(color: Colors.amber[600])),
               )
             : ListView.builder(itemBuilder: (context, index) {
                 return ListTile(
