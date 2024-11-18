@@ -5,6 +5,7 @@ import 'package:flutter/services.dart' show rootBundle;
 import 'package:csv/csv.dart';
 import 'package:stoic_quotes/FavoritesScreen.dart';
 import 'package:stoic_quotes/ContactsScreen.dart';
+import 'package:stoic_quotes/favoritesdb.dart';
 
 class QuotesScreen extends StatefulWidget {
   const QuotesScreen({super.key});
@@ -53,21 +54,25 @@ class _QuotesScreenState extends State<QuotesScreen> {
     });
   }
 
-  void toggleFavorite() {
-    setState(() {
-      if (isFavorite()) {
-        favoriteQuotes.remove(quotes[currIndex]);
-      } else {
-        favoriteQuotes.add(quotes[currIndex]);
-      }
-    });
+  void toggleFavorite() async {
+    final currentQuote = quotes[currIndex];
+    final dbHelper = DBHelper();
+
+    if(isFavorite()){
+      await dbHelper.deleteFavorite(currentQuote['quote']!);
+      favoriteQuotes.remove(currentQuote);
+    } else {
+      await dbHelper.insertFavorite(currentQuote['quote']!, currentQuote['author']!,);
+      favoriteQuotes.add(currentQuote);
+    }
+    setState(() {});
   }
 
   void openFavorites() {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => FavoritesScreen(favorites: favoriteQuotes),
+        builder: (context) => FavoritesScreen(),
       ),
     );
   }
