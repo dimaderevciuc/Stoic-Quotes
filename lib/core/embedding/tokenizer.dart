@@ -1,12 +1,12 @@
-/// A copy of the Hugging Face BERT WordPiece tokenizer as Model2Vec uses it.
+/// A copy of the Hugging Face BERT WordPiece tokenizer used by the embedding model.
 ///
-/// Steps, each matching the Python side (verified by test/embedding tests):
-/// 1. Cut the input to maxLength * medianTokenLength code points (model2vec encode).
+/// Steps, each matching `tokenizers` in Python (verified by test/embedding tests):
+/// 1. Split out special token strings such as "[CLS]", matched case sensitive on
+///    the raw text (they are "added tokens" with normalized: false).
 /// 2. Normalize every code point with the exported tables (BertNormalizer).
 /// 3. Split on whitespace and isolate punctuation (BertPreTokenizer).
 /// 4. Greedy longest match WordPiece; a word that cannot be split becomes [UNK].
-/// 5. Keep the first maxLength tokens, then drop [UNK] (model2vec tokenize).
-/// No [CLS] or [SEP] are added: Model2Vec encodes without special tokens.
+/// 5. Keep maxLength - 2 tokens and wrap them in [CLS] ... [SEP].
 library;
 
 import 'char_tables.dart';
@@ -15,45 +15,76 @@ class WordPieceTokenizer {
   WordPieceTokenizer({
     required List<String> vocab,
     required this.tables,
+    required Map<String, int> specialTokens,
+    required this.clsId,
+    required this.sepId,
     required this.unkId,
     required this.subwordPrefix,
     required this.maxInputCharsPerWord,
     required this.maxLength,
-    required this.medianTokenLength,
-  }) : _vocab = {for (var i = 0; i < vocab.length; i++) vocab[i]: i};
+  }) : _vocab = {for (var i = 0; i < vocab.length; i++) vocab[i]: i},
+       // Longest first, so a longer special token wins over a prefix of it.
+       _specials = specialTokens.entries.toList()
+         ..sort((a, b) => b.key.length.compareTo(a.key.length));
 
   final Map<String, int> _vocab;
+  final List<MapEntry<String, int>> _specials;
   final CharTables tables;
+  final int clsId;
+  final int sepId;
   final int unkId;
   final String subwordPrefix;
   final int maxInputCharsPerWord;
 
-  /// Null means no truncation (some models disable it).
-  final int? maxLength;
-  final int medianTokenLength;
+  /// Total length including [CLS] and [SEP].
+  final int maxLength;
 
   List<int> tokenize(String text) {
+    final budget = maxLength - 2;
     final ids = <int>[];
-    for (final word in preTokenize(normalize(_truncateChars(text)))) {
-      ids.addAll(_wordPiece(word));
-      if (maxLength != null && ids.length >= maxLength!) break;
+    for (final segment in _splitSpecial(text)) {
+      if (segment.specialId != null) {
+        ids.add(segment.specialId!);
+      } else {
+        for (final word in preTokenize(normalize(segment.text))) {
+          ids.addAll(_wordPiece(word));
+          if (ids.length >= budget) break;
+        }
+      }
+      if (ids.length >= budget) break;
     }
-    final kept = maxLength == null || ids.length <= maxLength!
-        ? ids
-        : ids.sublist(0, maxLength);
     return [
-      for (final id in kept)
-        if (id != unkId) id,
+      clsId,
+      ...ids.length > budget ? ids.sublist(0, budget) : ids,
+      sepId,
     ];
   }
 
-  String _truncateChars(String text) {
-    if (maxLength == null) return text;
-    final limit = maxLength! * medianTokenLength;
-    final runes = text.runes;
-    return runes.length <= limit
-        ? text
-        : String.fromCharCodes(runes.take(limit));
+  List<_Segment> _splitSpecial(String text) {
+    final segments = <_Segment>[];
+    var plainStart = 0;
+    var i = 0;
+    while (i < text.length) {
+      MapEntry<String, int>? match;
+      for (final special in _specials) {
+        if (text.startsWith(special.key, i)) {
+          match = special;
+          break;
+        }
+      }
+      if (match == null) {
+        i++;
+        continue;
+      }
+      if (i > plainStart) segments.add(_Segment(text.substring(plainStart, i)));
+      segments.add(_Segment('', match.value));
+      i += match.key.length;
+      plainStart = i;
+    }
+    if (plainStart < text.length) {
+      segments.add(_Segment(text.substring(plainStart)));
+    }
+    return segments;
   }
 
   String normalize(String text) {
@@ -118,4 +149,11 @@ class WordPieceTokenizer {
     }
     return pieces;
   }
+}
+
+class _Segment {
+  const _Segment(this.text, [this.specialId]);
+
+  final String text;
+  final int? specialId;
 }

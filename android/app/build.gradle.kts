@@ -29,6 +29,15 @@ android {
         versionName = flutter.versionName
     }
 
+    packaging {
+        jniLibs {
+            // Compress native libraries in the APK. ONNX Runtime alone is 34 MB per ABI
+            // uncompressed; compressed it is about 13 MB. The cost is extracting them once
+            // at install, which also uses that much more storage on the phone.
+            useLegacyPackaging = true
+        }
+    }
+
     buildTypes {
         release {
             // TODO: Add your own signing config for the release build.

@@ -1,11 +1,23 @@
 {
- "model": "minishlab/potion-base-8M",
+ "model": "Xenova/gte-small",
+ "revision": "5927d1727bb12db490052a1b33265ad78058de08",
+ "license": "MIT",
+ "onnx_file": "model-18dec105109b.onnx",
+ "onnx_sha256": "18dec105109b6004369799ca4761fb8fb413c64172c02147bcfac186b5c5f6cb",
  "doc_mode": "weighted",
- "unk_id": 1,
+ "max_length": 256,
+ "special_tokens": {
+  "[PAD]": 0,
+  "[UNK]": 100,
+  "[CLS]": 101,
+  "[SEP]": 102,
+  "[MASK]": 103
+ },
+ "cls_id": 101,
+ "sep_id": 102,
+ "unk_id": 100,
  "continuing_subword_prefix": "##",
  "max_input_chars_per_word": 100,
- "max_length": 512,
- "median_token_length": 6,
  "quote_ids": [
   "ja-1-a",
   "ja-1-b",

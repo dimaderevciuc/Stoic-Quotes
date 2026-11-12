@@ -44,3 +44,7 @@ app.*.map.json
 
 # Test builds for sideloading
 /releases/
+
+# The ONNX model (34 MB) is not committed: `cd pipeline && uv run stoic-embed fetch`
+# downloads the pinned revision and checks its SHA-256 against config.json.
+/assets/embedding/model-*.onnx
