@@ -10,6 +10,7 @@ requires-python = ">=3.13"
 dependencies = [
     "beautifulsoup4>=4.15.0",
     "httpx>=0.28.1",
+    "model2vec>=0.10.0",
     "pydantic>=2.14.3",
     "rapidfuzz>=3.14.6",
     "typer>=0.29.1",
@@ -22,6 +23,7 @@ stoic-split = "stoic_pipeline.split:app"
 stoic-curate = "stoic_pipeline.curate:app"
 stoic-review = "stoic_pipeline.review:app"
 stoic-legacy = "stoic_pipeline.legacy:app"
+stoic-embed = "stoic_pipeline.embed:app"
 
 [build-system]
 requires = ["uv_build>=0.12.23,<0.13.0"]
