@@ -250,7 +250,10 @@ def export_cmd(
     vocab: dict[str, int] = tokenizer["model"]["vocab"]
     tokens = sorted(vocab, key=vocab.__getitem__)
     require([vocab[t] for t in tokens] == list(range(len(tokens))), "vocab ids must be dense")
-    require(not any("\n" in t for t in tokens), "vocab.txt is one token per line")
+    require(
+        all(t and "\n" not in t and "\r" not in t for t in tokens),
+        "vocab.txt is one non empty token per line",
+    )
     (ASSETS / "vocab.txt").write_text("\n".join(tokens) + "\n", encoding="utf-8")
 
     q, scales = quantize_rows(np.asarray(model.embedding, dtype=np.float32))

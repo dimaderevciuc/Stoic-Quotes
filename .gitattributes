@@ -1,0 +1,4 @@
+# Generated embedding files: never diff or normalize line endings.
+assets/embedding/*.bin binary
+assets/embedding/*.json -diff
+assets/embedding/vocab.txt -diff
