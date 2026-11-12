@@ -18,11 +18,11 @@ class ContactsScreen extends StatelessWidget {
           children: [
             ElevatedButton.icon(
               onPressed: () {},
-              icon: Icon(
+              icon: const Icon(
                 Icons.email,
                 color: Colors.white,
               ),
-              label: Text(
+              label: const Text(
                 'Email Us',
                 style: TextStyle(color: Colors.white),
               ),
@@ -30,14 +30,14 @@ class ContactsScreen extends StatelessWidget {
                 backgroundColor: Colors.red[600],
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             ElevatedButton.icon(
               onPressed: () {},
-              icon: Icon(
+              icon: const Icon(
                 Icons.facebook,
                 color: Colors.white,
               ),
-              label: Text(
+              label: const Text(
                 'Visit Facebook',
                 style: TextStyle(color: Colors.white),
               ),
@@ -45,7 +45,7 @@ class ContactsScreen extends StatelessWidget {
                 backgroundColor: Colors.blue[700],
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             ElevatedButton.icon(
               onPressed: () {
                 

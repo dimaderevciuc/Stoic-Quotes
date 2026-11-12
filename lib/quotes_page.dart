@@ -1,9 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:csv/csv.dart';
-import 'package:stoic_quotes/FavoritesScreen.dart';
-import 'package:stoic_quotes/ContactsScreen.dart';
+import 'package:stoic_quotes/favorites_screen.dart';
+import 'package:stoic_quotes/contacts_screen.dart';
 import 'package:stoic_quotes/favoritesdb.dart';
+
+/// Parses the bundled CSV (columns: quote, author, no header) into quote maps.
+/// Kept as a pure function so it can be unit tested without Flutter bindings.
+List<Map<String, String>> parseQuotesCsv(String csvText) {
+  // Fixed delimiter: auto detection could guess wrong for quotes containing ';'.
+  final List<List<dynamic>> rows = Csv(autoDetect: false).decode(csvText);
+  return rows
+      .where((row) => row.length >= 2)
+      .map((row) => {
+            'quote': row[0].toString(),
+            'author': row[1].toString(),
+          })
+      .toList();
+}
 
 class QuotesScreen extends StatefulWidget {
   const QuotesScreen({super.key});
@@ -29,6 +43,7 @@ class _QuotesScreenState extends State<QuotesScreen> {
 
   Future<void> loadFavorites() async {
     final rows = await DBHelper().getFavorites();
+    if (!mounted) return;
     setState(() {
       favoriteTexts = rows.map((row) => row['quote'].toString()).toSet();
     });
@@ -37,16 +52,9 @@ class _QuotesScreenState extends State<QuotesScreen> {
   Future<void> loadQuotes() async {
     final csvRawData =
         await rootBundle.loadString('lib/assets/quotes_list.csv');
-    List<List<dynamic>> csvData =
-        const CsvToListConverter().convert(csvRawData);
-
+    if (!mounted) return;
     setState(() {
-      quotes = csvData.map((row) {
-        return {
-          'quote': row[0].toString(),
-          'author': row[1].toString(),
-        };
-      }).toList()
+      quotes = parseQuotesCsv(csvRawData)
         ..shuffle(); // random order, no repeats until the list wraps
     });
   }
@@ -63,7 +71,7 @@ class _QuotesScreenState extends State<QuotesScreen> {
     });
   }
 
-  void toggleFavorite() async {
+  Future<void> toggleFavorite() async {
     final currentQuote = quotes[currIndex];
     final dbHelper = DBHelper();
 
@@ -74,14 +82,15 @@ class _QuotesScreenState extends State<QuotesScreen> {
       await dbHelper.insertFavorite(currentQuote['quote']!, currentQuote['author']!,);
       favoriteTexts.add(currentQuote['quote']!);
     }
+    if (!mounted) return;
     setState(() {});
   }
 
   void openFavorites() {
     Navigator.push(
       context,
-      MaterialPageRoute(
-        builder: (context) => FavoritesScreen(),
+      MaterialPageRoute<void>(
+        builder: (context) => const FavoritesScreen(),
       ),
     ).then((_) => loadFavorites()); // refresh in case favorites were removed there
   }
@@ -89,8 +98,8 @@ class _QuotesScreenState extends State<QuotesScreen> {
   void openContactInfo() {
     Navigator.push(
       context,
-      MaterialPageRoute(
-        builder: (context) => ContactsScreen(),
+      MaterialPageRoute<void>(
+        builder: (context) => const ContactsScreen(),
       ),
     );
   }
@@ -100,7 +109,7 @@ class _QuotesScreenState extends State<QuotesScreen> {
     return Scaffold(
       backgroundColor: Colors.black87,
       appBar: AppBar(
-        title: Text('   Stoic Quotes'),
+        title: const Text('   Stoic Quotes'),
         titleTextStyle: TextStyle(
             fontStyle: FontStyle.italic,
             color: Colors.amber[600],
@@ -138,13 +147,13 @@ class _QuotesScreenState extends State<QuotesScreen> {
       ),
       body: Center(
         child: quotes.isEmpty
-            ? CircularProgressIndicator()
+            ? const CircularProgressIndicator()
             : Padding(
                 padding: const EdgeInsets.all(16),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    SizedBox(height: 250),
+                    const SizedBox(height: 250),
                     SizedBox(
                       height: 250,
                       child: Column(
@@ -158,7 +167,7 @@ class _QuotesScreenState extends State<QuotesScreen> {
                                 fontWeight: FontWeight.bold,
                                 color: Colors.amber[600]),
                           ),
-                          SizedBox(height: 10),
+                          const SizedBox(height: 10),
                           Text(
                             '-${quotes[currIndex]['author'] ?? ''}-',
                             textAlign: TextAlign.center,
@@ -168,13 +177,13 @@ class _QuotesScreenState extends State<QuotesScreen> {
                         ],
                       ),
                     ),
-                    SizedBox(height: 100),
+                    const SizedBox(height: 100),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         ElevatedButton(
                           onPressed: showPreviousQuote,
-                          child: Text('Previous'),
+                          child: const Text('Previous'),
                         ),
                         IconButton(
                           onPressed: toggleFavorite,
@@ -187,7 +196,7 @@ class _QuotesScreenState extends State<QuotesScreen> {
                         ),
                         ElevatedButton(
                           onPressed: showNextQuote,
-                          child: Text('Next'),
+                          child: const Text('Next'),
                         ),
                       ],
                     )

@@ -19,7 +19,7 @@ class DBHelper {
     final dbPath = await getDatabasesPath();
     final path = join(dbPath, 'favorites.db');
 
-    return await openDatabase(
+    return openDatabase(
       path,
       version: 1,
       onCreate: (db, version) {
@@ -36,16 +36,16 @@ class DBHelper {
 
   Future<int> insertFavorite(String quote, String author) async {
     final db = await database;
-    return await db.insert('favorites', {'quote': quote, 'author': author});
+    return db.insert('favorites', {'quote': quote, 'author': author});
   }
 
   Future<List<Map<String, dynamic>>> getFavorites() async {
     final db = await database;
-    return await db.query('favorites');
+    return db.query('favorites');
   }
 
   Future<int> deleteFavorite(String quote) async {
     final db = await database;
-    return await db.delete('favorites', where: 'quote = ?', whereArgs: [quote]);
+    return db.delete('favorites', where: 'quote = ?', whereArgs: [quote]);
   }
 }
