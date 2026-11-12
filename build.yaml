@@ -1,0 +1,8 @@
+targets:
+  $default:
+    builders:
+      drift_dev:
+        options:
+          # ISO 8601 text keeps milliseconds, so favorites added in the same
+          # second still sort in the order they were added.
+          store_date_time_values_as_text: true

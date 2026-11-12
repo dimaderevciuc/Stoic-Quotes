@@ -151,17 +151,23 @@ class _QuoteCardState extends State<QuoteCard> {
               padding: const EdgeInsets.fromLTRB(8, 0, 8, 4),
               child: Row(
                 children: [
+                  // Flexible: with large system text the label shortens
+                  // instead of pushing the icons off screen.
                   if (widget.onOpen == null)
-                    TextButton.icon(
-                      onPressed: () => setState(() => _expanded = !_expanded),
-                      icon: Icon(
-                        _expanded ? Icons.expand_less : Icons.expand_more,
+                    Flexible(
+                      child: TextButton.icon(
+                        onPressed: () => setState(() => _expanded = !_expanded),
+                        icon: Icon(
+                          _expanded ? Icons.expand_less : Icons.expand_more,
+                        ),
+                        label: Text(
+                          _expanded ? 'Hide passage' : 'Read the passage',
+                          overflow: TextOverflow.ellipsis,
+                        ),
                       ),
-                      label: Text(
-                        _expanded ? 'Hide passage' : 'Read the passage',
-                      ),
-                    ),
-                  const Spacer(),
+                    )
+                  else
+                    const Spacer(),
                   IconButton(
                     tooltip: 'Share as image',
                     onPressed: () => shareQuoteImage(_shareKey, q),

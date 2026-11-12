@@ -850,6 +850,9 @@ abstract class _$UserDatabase extends GeneratedDatabase {
     seenQuotes,
     settings,
   ];
+  @override
+  DriftDatabaseOptions get options =>
+      const DriftDatabaseOptions(storeDateTimeAsText: true);
 }
 
 typedef $$FavoritesTableCreateCompanionBuilder = FavoritesCompanion Function({

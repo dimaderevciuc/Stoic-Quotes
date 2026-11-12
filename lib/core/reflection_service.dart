@@ -71,10 +71,7 @@ class ReflectionService implements ReflectionFinder {
     final result = search.data.rank(vector, k: resultCount);
     return FoundReflection(
       situation: result.situation,
-      quotes: [
-        for (final hit in result.quotes)
-          ?content.quote(hit.id),
-      ],
+      quotes: [for (final hit in result.quotes) ?content.quote(hit.id)],
     );
   }
 }

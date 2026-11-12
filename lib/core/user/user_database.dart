@@ -63,18 +63,22 @@ UserDatabase openUserDatabase(File file, String hexKey) {
   );
 }
 
-/// In-memory database for tests, encrypted the same way to exercise the setup.
+/// In-memory database for tests. Memory databases cannot be keyed, so this only
+/// checks that the encrypting build is loaded (encryption_test covers the key).
 UserDatabase openTestUserDatabase() =>
-    UserDatabase(NativeDatabase.memory(setup: (db) => _unlock(db, '0' * 64)));
+    UserDatabase(NativeDatabase.memory(setup: _requireCipher));
 
-void _unlock(Database db, String hexKey) {
+void _requireCipher(Database db) {
   // SQLite3MultipleCiphers answers this pragma; plain SQLite returns nothing.
-  final cipher = db.select('PRAGMA cipher');
-  if (cipher.isEmpty) {
+  if (db.select('PRAGMA cipher').isEmpty) {
     throw StateError(
       'SQLite was built without encryption (sqlite3mc expected)',
     );
   }
+}
+
+void _unlock(Database db, String hexKey) {
+  _requireCipher(db);
   db.execute("PRAGMA hexkey = '$hexKey'");
   // Fails here, not later, if the key is wrong.
   db.select('SELECT count(*) FROM sqlite_master');

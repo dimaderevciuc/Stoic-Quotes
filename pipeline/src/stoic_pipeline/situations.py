@@ -54,7 +54,8 @@ def load_situations() -> list[Situation]:
 def validate_situations(situations: list[Situation]) -> list[str]:
     """Every rule beyond the schema: links to quotes and taxonomy, no test leakage."""
     problems: list[str] = []
-    quote_ids = {q.id for q in load_quotes()}
+    quotes = {q.id: q for q in load_quotes()}
+    quote_ids = set(quotes)
     taxonomy = [json.loads(line) for line in TAXONOMY_FILE.read_text("utf-8").splitlines() if line]
     by_id = {t["id"]: t for t in taxonomy}
     seen: set[str] = set()
@@ -73,6 +74,12 @@ def validate_situations(situations: list[Situation]) -> list[str]:
         ):
             problems.append(f"{s.id}: title, category or sensitivity differs from the taxonomy")
         problems += [f"{s.id}: unknown quote {q}" for q in s.quote_ids if q not in quote_ids]
+        # "How it applies" must add something: not just repeat the card's explanation.
+        problems += [
+            f"{s.id}: application for {q} repeats its explanation"
+            for q, text in s.applications.items()
+            if q in quotes and text.strip().rstrip(".").lower() in quotes[q].explanation.lower()
+        ]
         # A phrase identical to a test sentence would make the tuning numbers lie.
         problems += [
             f"{s.id}: phrase is an eval sentence: {p!r}"
