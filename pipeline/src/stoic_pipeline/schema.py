@@ -34,6 +34,7 @@ THEMES: frozenset[str] = frozenset(
         "friendship",
         "gratitude",
         "grief",
+        "humility",
         "judgment",
         "kindness",
         "learning",
