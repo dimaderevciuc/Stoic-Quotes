@@ -133,7 +133,7 @@ class Quote(StrictModel):
     @classmethod
     def _id_format(cls, value: str) -> str:
         if not QUOTE_ID_PATTERN.match(value):
-            examples = "ma-4-3-a, sen-13-4-a, epi-ench-1-a, ja-2-a"
+            examples = "ma-4-3-a, sen-13-4-a, epi-ench-5-a, ja-2-a"
             raise ValueError(f"id {value!r} must look like {examples}")
         return value
 
