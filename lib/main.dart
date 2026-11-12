@@ -1,19 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:stoic_quotes/quotes_page.dart';
-void main() => runApp(const QuotesGeneratorApp());
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class QuotesGeneratorApp extends StatelessWidget {
-  const QuotesGeneratorApp({super.key});
+import 'app/app.dart';
+import 'app/licenses.dart';
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Quotes Generator',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const QuotesScreen(),
-      debugShowCheckedModeBanner: false,
-    );
-  }
+void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  registerExtraLicenses();
+  runApp(const ProviderScope(child: StoicQuotesApp()));
 }
