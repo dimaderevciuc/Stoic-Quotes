@@ -2,3 +2,6 @@
 __pycache__/
 .pytest_cache/
 .ruff_cache/
+
+# Downloaded source texts: large, reproducible from data/sources.json
+data/raw/

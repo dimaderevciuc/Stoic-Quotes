@@ -1,0 +1,1361 @@
+[
+  {
+    "id": "meditations-long",
+    "author": "Marcus Aurelius",
+    "work": "Meditations",
+    "title": "Thoughts of the Emperor Marcus Aurelius Antoninus",
+    "translator": "George Long",
+    "year": 1862,
+    "year_note": "The Gutenberg file states no edition year; 1862 is the first edition of Long's translation. Long died in 1879.",
+    "files": [
+      {
+        "path": "meditations-long/pg15877.txt",
+        "url": "https://www.gutenberg.org/cache/epub/15877/pg15877.txt",
+        "revision": null,
+        "sha256": "6584df7e90d6035eece30d8028527290bf2508076963ee0376cb41db9cf88d5b"
+      }
+    ]
+  },
+  {
+    "id": "epictetus-long",
+    "author": "Epictetus",
+    "work": "Discourses and Encheiridion",
+    "title": "The Discourses of Epictetus; with the Encheiridion and Fragments",
+    "translator": "George Long",
+    "year": 1877,
+    "year_note": "Year from the Wikisource header (PD-US, translator died 1879).",
+    "files": [
+      {
+        "path": "epictetus-long/book-1-chapter-1.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14267196",
+        "revision": 14267196,
+        "sha256": "9e651d670858df3ec64636dc8a61c8c8d0821778b0fcbd25f95432647fe698df"
+      },
+      {
+        "path": "epictetus-long/book-1-chapter-2.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14266538",
+        "revision": 14266538,
+        "sha256": "8e20a467ca8acc7f225b0e59f7a71c7bb2f8913b9f26307e18106b02704bc153"
+      },
+      {
+        "path": "epictetus-long/book-1-chapter-3.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14266543",
+        "revision": 14266543,
+        "sha256": "b1aca6ad3c4704e0bad3e349718c313516e06d93f719091edf358b1eb76bfee4"
+      },
+      {
+        "path": "epictetus-long/book-1-chapter-4.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14266549",
+        "revision": 14266549,
+        "sha256": "05f4ee95dfc7d117731a0b9064edc941fc61df83385863b890d557331d156e31"
+      },
+      {
+        "path": "epictetus-long/book-1-chapter-5.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14266553",
+        "revision": 14266553,
+        "sha256": "59d9fd70c0bc07d0db020ff1a878ad070bb35c7119b3a6e961f6ba6ab30a0eed"
+      },
+      {
+        "path": "epictetus-long/book-1-chapter-6.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14266563",
+        "revision": 14266563,
+        "sha256": "b329a1936bd7eb621b937f50f053d32c6417409153a3db62070bcda32b1b86ef"
+      },
+      {
+        "path": "epictetus-long/book-1-chapter-7.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14266566",
+        "revision": 14266566,
+        "sha256": "433e05a7d2e00a04f94b860a71270c8b0ba1a62e9aeeaefd597727033ae32783"
+      },
+      {
+        "path": "epictetus-long/book-1-chapter-8.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14266574",
+        "revision": 14266574,
+        "sha256": "ff6e64fecfcb9e5e30da87a7fc80670cdd38df829fc585067bd874ab37d13b34"
+      },
+      {
+        "path": "epictetus-long/book-1-chapter-9.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14266577",
+        "revision": 14266577,
+        "sha256": "344ff38bd7362456b891e1065902920a5157a5de092f5a6eff6aa4292f22bfe3"
+      },
+      {
+        "path": "epictetus-long/book-1-chapter-10.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14266583",
+        "revision": 14266583,
+        "sha256": "57b0259e55ec889ee30d9893867004658f0adc08b9a00853ee45eed071f60149"
+      },
+      {
+        "path": "epictetus-long/book-1-chapter-11.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14267048",
+        "revision": 14267048,
+        "sha256": "551c3f1d246ec95312321f82fb6e71cfbc0ab81ff74f76f8b700298a93eadcec"
+      },
+      {
+        "path": "epictetus-long/book-1-chapter-12.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14267054",
+        "revision": 14267054,
+        "sha256": "d3f2550bddf01059918fa4fb9215c616965eb8e722feb1df2a0942a573d939e8"
+      },
+      {
+        "path": "epictetus-long/book-1-chapter-13.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14267060",
+        "revision": 14267060,
+        "sha256": "155bba7e564db341ea743d8867cb1ef16d1861d00820ae37f81efe1b2fe38fdc"
+      },
+      {
+        "path": "epictetus-long/book-1-chapter-14.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14267063",
+        "revision": 14267063,
+        "sha256": "a7d0656b0c41146c43c4d6da30da19d2694acf9f7afe1d92132d5875882efd18"
+      },
+      {
+        "path": "epictetus-long/book-1-chapter-15.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14267066",
+        "revision": 14267066,
+        "sha256": "a82f3a0269a7f144c4e46623ecdaeea82c4a7c44f336c48257c8703cef3615f1"
+      },
+      {
+        "path": "epictetus-long/book-1-chapter-16.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14267069",
+        "revision": 14267069,
+        "sha256": "c6edb5b021100c7699fd124e5360d5e8a3e83b5693de07cdd8d6eedeeee0cc4d"
+      },
+      {
+        "path": "epictetus-long/book-1-chapter-17.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14267073",
+        "revision": 14267073,
+        "sha256": "b716bcc5ea13f1ddec1a2d1e69d6358d5e094594bf85ec76f3d1f414a477fcfe"
+      },
+      {
+        "path": "epictetus-long/book-1-chapter-18.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14267096",
+        "revision": 14267096,
+        "sha256": "21c4a96ceb1db9cf6a4c0fdb12cceb32cd89acd98644b5c7d784045f22c656c4"
+      },
+      {
+        "path": "epictetus-long/book-1-chapter-19.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14267108",
+        "revision": 14267108,
+        "sha256": "1da3b024bc38bacdbb117599dd17611bb7c1e4f2a5638d43f35c7fd487575ce1"
+      },
+      {
+        "path": "epictetus-long/book-1-chapter-20.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14267114",
+        "revision": 14267114,
+        "sha256": "6ee63fa7917e40ec8f6bfef8b01eac9d1eca1641ba9d46ab4287f23208f9e4c7"
+      },
+      {
+        "path": "epictetus-long/book-1-chapter-21.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14267417",
+        "revision": 14267417,
+        "sha256": "7d0f8ddfecca1c5d2588c466286e856e2052e750ee7232be1d85fb641269bb64"
+      },
+      {
+        "path": "epictetus-long/book-1-chapter-22.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14267419",
+        "revision": 14267419,
+        "sha256": "b35c95217e3c12265bd2cf32c4f073be07ef692c7459f6c9d7742dc6d57a0738"
+      },
+      {
+        "path": "epictetus-long/book-1-chapter-23.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14267426",
+        "revision": 14267426,
+        "sha256": "0bd2e0533565ba161ef28d9e46845d2cfff1481b102f28df21e45a13afad7f93"
+      },
+      {
+        "path": "epictetus-long/book-1-chapter-24.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14267433",
+        "revision": 14267433,
+        "sha256": "e34b8d9d44dccf24770f7f31caf406eb6883987f83f151f2605dd5b66e27c785"
+      },
+      {
+        "path": "epictetus-long/book-1-chapter-25.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14267435",
+        "revision": 14267435,
+        "sha256": "656ecca855573b7f4c20a20a7d7338bfe0fe50b651b942f6cf7ee29166797f48"
+      },
+      {
+        "path": "epictetus-long/book-1-chapter-26.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14267441",
+        "revision": 14267441,
+        "sha256": "867a771c444e9aaca4ae397beb5ba0afa4981cfac7ce0542c63f7413683f2838"
+      },
+      {
+        "path": "epictetus-long/book-1-chapter-27.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14267445",
+        "revision": 14267445,
+        "sha256": "c333d6f2d84831be54639e26bffc5a5acacf8276e68544701b0f75e131be415b"
+      },
+      {
+        "path": "epictetus-long/book-1-chapter-28.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14267446",
+        "revision": 14267446,
+        "sha256": "7da157fd138258efe3d4380557bb9331a316278855b0d130abbe67de0a3b208d"
+      },
+      {
+        "path": "epictetus-long/book-1-chapter-29.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14267447",
+        "revision": 14267447,
+        "sha256": "3508338bccbf40fe85cc0bf72deabe4cfbf09382dc8b9beae3db79a39805fce0"
+      },
+      {
+        "path": "epictetus-long/book-1-chapter-30.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14267455",
+        "revision": 14267455,
+        "sha256": "8966e4beb3e6dd65403800e3eb8fbf93642db90ea06e865e523c06d5a7b40750"
+      },
+      {
+        "path": "epictetus-long/book-2-chapter-1.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14267464",
+        "revision": 14267464,
+        "sha256": "7a0c74b3cfc4a0305e1a4e8af4908a101bed9f5a4a2e6b159f7ac7ec6b9a8d1d"
+      },
+      {
+        "path": "epictetus-long/book-2-chapter-2.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14267783",
+        "revision": 14267783,
+        "sha256": "2f1c0949c7441f064183b621fb861a66ba5f7271641ae5f3dce8c65d5e1fb6c7"
+      },
+      {
+        "path": "epictetus-long/book-2-chapter-3.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14267781",
+        "revision": 14267781,
+        "sha256": "0313e7cf27d3975a9d699caaa9780404d6ca52b279146d7469e42a8d046ae20c"
+      },
+      {
+        "path": "epictetus-long/book-2-chapter-4.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14267785",
+        "revision": 14267785,
+        "sha256": "03eae658361985eb8a870e9332f1035d1485e931602b679efee3ea005d3aef78"
+      },
+      {
+        "path": "epictetus-long/book-2-chapter-5.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14267789",
+        "revision": 14267789,
+        "sha256": "9968c0d5c4fd504145175c710836fb61e5c06b9d27de45bca768c1b1f980df33"
+      },
+      {
+        "path": "epictetus-long/book-2-chapter-6.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14267796",
+        "revision": 14267796,
+        "sha256": "a0b57f343b0e52bb6fc9e54358adfcb823257731169931922865ebc598530c6d"
+      },
+      {
+        "path": "epictetus-long/book-2-chapter-7.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14267798",
+        "revision": 14267798,
+        "sha256": "216414ebb720d717bce6cf30ab7b35102d055e9fffa13ed8ed7a5f4e803c7a38"
+      },
+      {
+        "path": "epictetus-long/book-2-chapter-8.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14267802",
+        "revision": 14267802,
+        "sha256": "7ee103f929f0768a69a1e23846884b5f924992510b91bf4a79507dca558357e4"
+      },
+      {
+        "path": "epictetus-long/book-2-chapter-9.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14267807",
+        "revision": 14267807,
+        "sha256": "c598ee4f6c7d13ab742a85ebe81b9ed246eb9b7d0a1be9c22a5f2a406f3342bd"
+      },
+      {
+        "path": "epictetus-long/book-2-chapter-10.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14268146",
+        "revision": 14268146,
+        "sha256": "e9ebf3c83a568509ec6e5c3f4f1ae67db706186df4c0b762d9969042ca6bf551"
+      },
+      {
+        "path": "epictetus-long/book-2-chapter-11.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14268144",
+        "revision": 14268144,
+        "sha256": "73bc2c99b3804d9813ca0527e7f8101554c936ea319da0e84adb6f2b93cc2bdb"
+      },
+      {
+        "path": "epictetus-long/book-2-chapter-12.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14268152",
+        "revision": 14268152,
+        "sha256": "8e79fffd5d3147a58b99b9acd8b8c96f49da63268a661eef1b8470d18402243d"
+      },
+      {
+        "path": "epictetus-long/book-2-chapter-13.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14268157",
+        "revision": 14268157,
+        "sha256": "276eb35530c626904b75d1cf3de767b62c3cbaf9d260a3c30eda573ba8f03d01"
+      },
+      {
+        "path": "epictetus-long/book-2-chapter-14.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14268164",
+        "revision": 14268164,
+        "sha256": "e857c0dab6dfafdc80b3214897d76f2cbf960c82d56ccac31972905daafd1867"
+      },
+      {
+        "path": "epictetus-long/book-2-chapter-15.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14268170",
+        "revision": 14268170,
+        "sha256": "20bf52d6e71cc88cc1a00daf8992b136a6009ffc8666eefdcc9f8e7d43b54a66"
+      },
+      {
+        "path": "epictetus-long/book-2-chapter-16.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14268174",
+        "revision": 14268174,
+        "sha256": "a2e95703d4b2380ca0ae1d54a1177686aaf0bd899d4eb9680946efd0f045315d"
+      },
+      {
+        "path": "epictetus-long/book-2-chapter-17.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14268177",
+        "revision": 14268177,
+        "sha256": "fbab853c625b82632ee6e6bbf173daa8d348ee4b1fe9a9aa7e4f793ff7772e6c"
+      },
+      {
+        "path": "epictetus-long/book-2-chapter-18.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14268184",
+        "revision": 14268184,
+        "sha256": "6325621c7d701adb67e81483cdd14ec305dd6b73cf78e4a5c578535089f5b11e"
+      },
+      {
+        "path": "epictetus-long/book-2-chapter-19.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14268189",
+        "revision": 14268189,
+        "sha256": "50f99eeaee6cc775e716d6d97590195ebf0df515946bca35450a846ee4ae66dd"
+      },
+      {
+        "path": "epictetus-long/book-2-chapter-20.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14268191",
+        "revision": 14268191,
+        "sha256": "fbf73c60cbd17e89747f28a4b054d71850900d7e3aae93e196c3286f9a251bbb"
+      },
+      {
+        "path": "epictetus-long/book-2-chapter-21.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14268925",
+        "revision": 14268925,
+        "sha256": "ed9428c753de258ba32b53dc255a445e51cc961e375da5996dd108412ede51b8"
+      },
+      {
+        "path": "epictetus-long/book-2-chapter-22.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14268929",
+        "revision": 14268929,
+        "sha256": "7c94d36a8717554e90cdb7745ea4a307d68c03365381a94a53c0bbb95d99b794"
+      },
+      {
+        "path": "epictetus-long/book-2-chapter-23.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14268934",
+        "revision": 14268934,
+        "sha256": "42e44ba4b9fbe1ea95e4bfe76012b91b8c4e01ae0494497a29ffdaf9e1cdc729"
+      },
+      {
+        "path": "epictetus-long/book-2-chapter-24.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14268937",
+        "revision": 14268937,
+        "sha256": "61657e42a5f34120972ea7dc6c699171d178b85d06eecd7b822bf632c84a2870"
+      },
+      {
+        "path": "epictetus-long/book-2-chapter-25.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14268938",
+        "revision": 14268938,
+        "sha256": "d50fc8e8b03e00a1fe6f1b797768945afbdde9f8879ef8a41d1e0453a849eda6"
+      },
+      {
+        "path": "epictetus-long/book-2-chapter-26.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14268941",
+        "revision": 14268941,
+        "sha256": "7f6259678ea99fd9bbf510ad6d710a1db06f9d20a4ae42a7f11feec1a7436165"
+      },
+      {
+        "path": "epictetus-long/book-3-chapter-1.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14268945",
+        "revision": 14268945,
+        "sha256": "d26ac5ec71d3b244c5fc62a7b574c29f8871e6f518797db551adba4ed4c8bac5"
+      },
+      {
+        "path": "epictetus-long/book-3-chapter-2.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14268947",
+        "revision": 14268947,
+        "sha256": "1226cf2e9ca6d21ac99bf7f313a3979d15bd191f304256273a580c41a22fa3b4"
+      },
+      {
+        "path": "epictetus-long/book-3-chapter-3.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14268948",
+        "revision": 14268948,
+        "sha256": "a7cfd2ceed392bfb2a9751e3d6b06eb09251e843d1dd726e75c6a21d5b255788"
+      },
+      {
+        "path": "epictetus-long/book-3-chapter-4.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14268952",
+        "revision": 14268952,
+        "sha256": "0df52e62a6fee92a97f1361709efff549509bf2116ab1abe380e60263782c337"
+      },
+      {
+        "path": "epictetus-long/book-3-chapter-5.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14268954",
+        "revision": 14268954,
+        "sha256": "5096527bb5acf05f0eb561a0dbcfcefa068d0c3c6ca77780728aac8bebbf43d6"
+      },
+      {
+        "path": "epictetus-long/book-3-chapter-6.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14268955",
+        "revision": 14268955,
+        "sha256": "cc037a9f956afe798d615956cdcaaee9fb5fa1df11ca2cf989d6e6c12a73405a"
+      },
+      {
+        "path": "epictetus-long/book-3-chapter-7.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14268956",
+        "revision": 14268956,
+        "sha256": "c41e37c0324cb7fc233b03020a63d628b93983f7127014f111feaec4e59685db"
+      },
+      {
+        "path": "epictetus-long/book-3-chapter-8.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14268957",
+        "revision": 14268957,
+        "sha256": "4baeb35616a112cbb3c170c46c73c547d3dfe924cbb888a3d6ced274cd43de2b"
+      },
+      {
+        "path": "epictetus-long/book-3-chapter-9.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14269305",
+        "revision": 14269305,
+        "sha256": "02b04981818020db2b2877808a4db47162a3714f9f3d97de73b5fa67cfc5814f"
+      },
+      {
+        "path": "epictetus-long/book-3-chapter-10.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14270249",
+        "revision": 14270249,
+        "sha256": "72214ee570842799d2a94a92a196ff29f784c33340db5be5ce80f166634aa81e"
+      },
+      {
+        "path": "epictetus-long/book-3-chapter-11.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14270357",
+        "revision": 14270357,
+        "sha256": "3e162d96569757037e425217eb2a17cbc30f2355641d71c852aefe3d972e147a"
+      },
+      {
+        "path": "epictetus-long/book-3-chapter-12.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14271240",
+        "revision": 14271240,
+        "sha256": "a720d39e1e29484c51a1c6785df3cf58909b98e773191091712b2fe948ebcffd"
+      },
+      {
+        "path": "epictetus-long/book-3-chapter-13.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14271498",
+        "revision": 14271498,
+        "sha256": "b2441ec7373cc1790da236f7a5ff452f69fd654e0cb0edc7d8d68ebb4a692c3b"
+      },
+      {
+        "path": "epictetus-long/book-3-chapter-14.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14271676",
+        "revision": 14271676,
+        "sha256": "c79983b1a7b776dd92fbd3e0c17857c778f0b7f218a4edf034007bdc9e18c92a"
+      },
+      {
+        "path": "epictetus-long/book-3-chapter-15.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14271721",
+        "revision": 14271721,
+        "sha256": "66ddf3b767e147ec57802d8f975ae26bce0fe70a6b67ee71280cd19bbf81f66e"
+      },
+      {
+        "path": "epictetus-long/book-3-chapter-16.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14273943",
+        "revision": 14273943,
+        "sha256": "38a4377009aff7c35dd2948763dd23268190ebade204862bceddf91ee0efa449"
+      },
+      {
+        "path": "epictetus-long/book-3-chapter-17.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14274100",
+        "revision": 14274100,
+        "sha256": "fc902af31a7db82d2e8546ae8bebd2622c09961abfcff2cae50668ed04eae2a4"
+      },
+      {
+        "path": "epictetus-long/book-3-chapter-18.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14274102",
+        "revision": 14274102,
+        "sha256": "ec3aa7629883c484780f9e977187b21b642cc0065cf41f7a708532e2a990259f"
+      },
+      {
+        "path": "epictetus-long/book-3-chapter-19.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14274153",
+        "revision": 14274153,
+        "sha256": "2f498f7cabd0e0e0ff7e6502a5b192df259f0a386cd200eb0d2062fef8bcc94a"
+      },
+      {
+        "path": "epictetus-long/book-3-chapter-20.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14274158",
+        "revision": 14274158,
+        "sha256": "3ef9115c538029ad241ffa06f105fcdba690f9724686b2f9da042d0ee21ef3eb"
+      },
+      {
+        "path": "epictetus-long/book-3-chapter-21.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14268974",
+        "revision": 14268974,
+        "sha256": "18770c8fdc267db953d26aee2c695b5cce136a7d6dcf32a5b8b3061f0d27ed68"
+      },
+      {
+        "path": "epictetus-long/book-3-chapter-22.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14268976",
+        "revision": 14268976,
+        "sha256": "f353df4e01e8e1c056144dbccd05f19417e64d46f4699db0d6d0d01ac284c10c"
+      },
+      {
+        "path": "epictetus-long/book-3-chapter-23.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14268977",
+        "revision": 14268977,
+        "sha256": "1953e785065f40355bd50da54fffd905f01ef3ca84e22c91921394c7ea406995"
+      },
+      {
+        "path": "epictetus-long/book-3-chapter-24.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14268978",
+        "revision": 14268978,
+        "sha256": "1fa358cef0c6dbb719889f6ecf21348775304644d0014bc9e1d6595b20666e54"
+      },
+      {
+        "path": "epictetus-long/book-3-chapter-25.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14268985",
+        "revision": 14268985,
+        "sha256": "5f0d8bdefd5a1e1708f41430437aa848af0ea7e323d3b3daea900c5cf71695ff"
+      },
+      {
+        "path": "epictetus-long/book-3-chapter-26.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14268989",
+        "revision": 14268989,
+        "sha256": "657e8e27125b637c793293eb5d6b92fd2181c862c6fa1060a797eb31efb67bd7"
+      },
+      {
+        "path": "epictetus-long/book-4-chapter-1.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14268997",
+        "revision": 14268997,
+        "sha256": "8b3a1099dbd47ed45da2a9da7d2a08d18c20ef7a6b2ce2c74bde27c5833796b7"
+      },
+      {
+        "path": "epictetus-long/book-4-chapter-2.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14268998",
+        "revision": 14268998,
+        "sha256": "f7fef07becfed7c569c549966ac186470471a60510ebfd9bc8bc1b0875130fd6"
+      },
+      {
+        "path": "epictetus-long/book-4-chapter-3.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14272162",
+        "revision": 14272162,
+        "sha256": "d06807d6b6f208b13b5d3f57eac11a2d66134d69b17799c0924be8ee9db478c5"
+      },
+      {
+        "path": "epictetus-long/book-4-chapter-4.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14273825",
+        "revision": 14273825,
+        "sha256": "6e86d8d482c4055bd9602309879906c931db3affa7dea07c114914e1b4efaec8"
+      },
+      {
+        "path": "epictetus-long/book-4-chapter-5.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14274653",
+        "revision": 14274653,
+        "sha256": "e8a950818583962a4746b4fbfeec37deb955270ede3a95c05b7200ae2acdd1fa"
+      },
+      {
+        "path": "epictetus-long/book-4-chapter-6.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14275447",
+        "revision": 14275447,
+        "sha256": "099d41858a8b782052e35d4deb28e803bb3b4ffd87e8d5c290c61ff8c7e99091"
+      },
+      {
+        "path": "epictetus-long/book-4-chapter-7.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14275827",
+        "revision": 14275827,
+        "sha256": "4505e3e99973a5ab271372a13217cb132bedd73b50776982bc13a9b6cb7bcdca"
+      },
+      {
+        "path": "epictetus-long/book-4-chapter-8.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14275869",
+        "revision": 14275869,
+        "sha256": "e994e631c5761bdac514a5310b9625d120f97d16b33b7e5e984fec5aff4c4d86"
+      },
+      {
+        "path": "epictetus-long/book-4-chapter-9.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14275896",
+        "revision": 14275896,
+        "sha256": "685b092ebeb5d39a3777eb87d2ceba9f2d68c99e0292e2ec8a1f4a23bdac7595"
+      },
+      {
+        "path": "epictetus-long/book-4-chapter-10.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14275899",
+        "revision": 14275899,
+        "sha256": "6541cbe78362cecf86e3ff1648faef48d0626992d8f10223e8099c0dd1ac430e"
+      },
+      {
+        "path": "epictetus-long/book-4-chapter-11.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14269009",
+        "revision": 14269009,
+        "sha256": "64abd3e3ed7ce5ec87eabddd42ad991a029a470547ef8a5d5d5c7b28d0e52ac2"
+      },
+      {
+        "path": "epictetus-long/book-4-chapter-12.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14269013",
+        "revision": 14269013,
+        "sha256": "2a3a4ff72897efe059d75fa23538550219af6eb4406ba4d237ac2ea9f1662496"
+      },
+      {
+        "path": "epictetus-long/book-4-chapter-13.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14269019",
+        "revision": 14269019,
+        "sha256": "b3fb8ca6dcc1dcf36c3d65f5d19e50ed11741f234893d386cf8fd660d40c7ae4"
+      },
+      {
+        "path": "epictetus-long/the-encheiridion-or-manual.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14269067",
+        "revision": 14269067,
+        "sha256": "f17572222e6a8c8a21f04b661cd358b1ba4cefdbd415e201fe9adce8b493c58d"
+      }
+    ]
+  },
+  {
+    "id": "seneca-gummere",
+    "author": "Seneca",
+    "work": "Moral Letters to Lucilius",
+    "title": "Ad Lucilium epistulae morales (Loeb Classical Library)",
+    "translator": "Richard M. Gummere",
+    "year": 1917,
+    "year_note": "Volume 1 (letters 1 to 65) 1917, volume 2 (66 to 92) 1920, volume 3 (93 to 124) 1925. Per letter years are set in split.py. Translator died 1930.",
+    "files": [
+      {
+        "path": "seneca-gummere/letter-1.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843822",
+        "revision": 14843822,
+        "sha256": "29b25976ef0dc051d42525ff663b11c8d3d1e4f73595341e88484a01ab98325e"
+      },
+      {
+        "path": "seneca-gummere/letter-2.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843823",
+        "revision": 14843823,
+        "sha256": "af588bd4356956cf4ac739cb1f743b558a8be33a49876c4a27d686ce1e14fc9b"
+      },
+      {
+        "path": "seneca-gummere/letter-3.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843824",
+        "revision": 14843824,
+        "sha256": "d0891d0ab486384fe23f47a924f9d47c43350d2b950639dc29e72570fb07b367"
+      },
+      {
+        "path": "seneca-gummere/letter-4.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843825",
+        "revision": 14843825,
+        "sha256": "54d0700285339ee0137699509865cd14c17fec61210d0a32d49361f945296681"
+      },
+      {
+        "path": "seneca-gummere/letter-5.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843828",
+        "revision": 14843828,
+        "sha256": "466e09291cf1b22af4dab75cbaac0584dcd6a081219b02d3891e31a3958e7bea"
+      },
+      {
+        "path": "seneca-gummere/letter-6.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843830",
+        "revision": 14843830,
+        "sha256": "03e1f90e1dab89769b99d37764712fde0cbee42750bd5985f9193758ca06ba08"
+      },
+      {
+        "path": "seneca-gummere/letter-7.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843832",
+        "revision": 14843832,
+        "sha256": "887828b61dc9ccd0300d1e0079ce349d9c4a2717231a8f634648d6450d121c9f"
+      },
+      {
+        "path": "seneca-gummere/letter-8.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843833",
+        "revision": 14843833,
+        "sha256": "45deca423be82f19fbb711cea57ddcb3750bfafdec8efc32e16721602790c60f"
+      },
+      {
+        "path": "seneca-gummere/letter-9.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843835",
+        "revision": 14843835,
+        "sha256": "1449895f00a1814c2104c6bd1be2fc6b791c67e951169baef7e4ea926f240440"
+      },
+      {
+        "path": "seneca-gummere/letter-10.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843836",
+        "revision": 14843836,
+        "sha256": "30986141aaa44e57571e06e5658de6e5d5d97cbf05feb08757db4325be0e6edf"
+      },
+      {
+        "path": "seneca-gummere/letter-11.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843837",
+        "revision": 14843837,
+        "sha256": "6041d06d087da2a03b68eeaad5aeb65f871f2a67407dcbe7c51d17253d70ddc5"
+      },
+      {
+        "path": "seneca-gummere/letter-12.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843840",
+        "revision": 14843840,
+        "sha256": "14efb5c8d7156cd0f8d18819e02b66512afbc2555199fbcc6d7deeaa2727c34f"
+      },
+      {
+        "path": "seneca-gummere/letter-13.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843841",
+        "revision": 14843841,
+        "sha256": "edda46b50816e532f751131e7d2886a3a59c28ffb3a3cc4e552839896752a561"
+      },
+      {
+        "path": "seneca-gummere/letter-14.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843842",
+        "revision": 14843842,
+        "sha256": "6462d2ceb6cf5d22e5ea12118686e549b6ddeb1286ea30b78cbc17b9bb1fc195"
+      },
+      {
+        "path": "seneca-gummere/letter-15.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843844",
+        "revision": 14843844,
+        "sha256": "ba8eb0a60708720f87da965f7e515ec4c5d98cad4d58dccc87744509e3e4b614"
+      },
+      {
+        "path": "seneca-gummere/letter-16.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843846",
+        "revision": 14843846,
+        "sha256": "8c3df5812dcd06cdce78f21620245781db283efdf3ab7a506f8dae1ab946f5b0"
+      },
+      {
+        "path": "seneca-gummere/letter-17.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843847",
+        "revision": 14843847,
+        "sha256": "7117d63f2629a82c13e4b219e12770bc65790fa1bd128633e28057c7b18bff26"
+      },
+      {
+        "path": "seneca-gummere/letter-18.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843849",
+        "revision": 14843849,
+        "sha256": "6d8a82eb68934d37828c9450105e15fae48e99dd57bf279ad8ded4ad36e27974"
+      },
+      {
+        "path": "seneca-gummere/letter-19.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843850",
+        "revision": 14843850,
+        "sha256": "fa77ecc04407ebd073696a61fbf45bc03f61fa374869b36899004cff0b8ea753"
+      },
+      {
+        "path": "seneca-gummere/letter-20.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843851",
+        "revision": 14843851,
+        "sha256": "afb27a53c68158b6661af88b8c484bffd9d8ced91a1516e80e5775ea0273054f"
+      },
+      {
+        "path": "seneca-gummere/letter-21.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843854",
+        "revision": 14843854,
+        "sha256": "cdad8a81c338ea5d681104906b43ce161f6468dbc707495f5076b8c8cf41a60c"
+      },
+      {
+        "path": "seneca-gummere/letter-22.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843855",
+        "revision": 14843855,
+        "sha256": "1703337702f9d064a2fdfd0b7b96587d2a658f507df379478914e6dc2b4ec7c5"
+      },
+      {
+        "path": "seneca-gummere/letter-23.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843856",
+        "revision": 14843856,
+        "sha256": "15cf9cd3b764d16f4985b655fed3e6b50387644a0554141dcc004daf3ba719ee"
+      },
+      {
+        "path": "seneca-gummere/letter-24.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843858",
+        "revision": 14843858,
+        "sha256": "4c3614b4a61604368dbd0d5703bc1e2dc5de1d6cb532a216212b66cae61b2715"
+      },
+      {
+        "path": "seneca-gummere/letter-25.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843859",
+        "revision": 14843859,
+        "sha256": "5d1790e6d784d325d44653b3f3d572e89fd9f2a1a27fd2fd91626185379c9cbb"
+      },
+      {
+        "path": "seneca-gummere/letter-26.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843860",
+        "revision": 14843860,
+        "sha256": "f7890f4c4558b853b46a6c15e0822087eb8cb70f3caba24ebf1650c6a773d12e"
+      },
+      {
+        "path": "seneca-gummere/letter-27.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843861",
+        "revision": 14843861,
+        "sha256": "1823cdece8aa3fb4032260b236208a469f14ac8cd56bd3eddee7f03c8f9371e0"
+      },
+      {
+        "path": "seneca-gummere/letter-28.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843862",
+        "revision": 14843862,
+        "sha256": "5e26aa279835560e0f213bdf572f88265a998eece960b7ec6ba9e8eeee4a83f3"
+      },
+      {
+        "path": "seneca-gummere/letter-29.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843864",
+        "revision": 14843864,
+        "sha256": "0b2aba779cafa82095eb15071f1aaaeaa08b74f3871e6455d8292c07c48df5e0"
+      },
+      {
+        "path": "seneca-gummere/letter-30.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843865",
+        "revision": 14843865,
+        "sha256": "465a3deb5cdcfecdbbd6de445b7c8e3bf3a9043d8eee130768fa2cceb8046092"
+      },
+      {
+        "path": "seneca-gummere/letter-31.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843866",
+        "revision": 14843866,
+        "sha256": "73460dc9b4264dadb64a57c722bea55891b761fdff32621f632203412e932039"
+      },
+      {
+        "path": "seneca-gummere/letter-32.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843867",
+        "revision": 14843867,
+        "sha256": "ce9b3c7421bfcecc5dca095f7601792f611a4f7496116e6bf178c21ee33f6e21"
+      },
+      {
+        "path": "seneca-gummere/letter-33.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=15153510",
+        "revision": 15153510,
+        "sha256": "0b4ba74cd94c2f51bb815a1d72d8513c818f977445d3be6a44c92c490a95202a"
+      },
+      {
+        "path": "seneca-gummere/letter-34.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843870",
+        "revision": 14843870,
+        "sha256": "e4a1d336ac0440b4b44a4f95919f90fdf54a7e642509ef2bf7352fcfa5b5eec0"
+      },
+      {
+        "path": "seneca-gummere/letter-35.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843871",
+        "revision": 14843871,
+        "sha256": "8ced8f8cfaa7b4f67ea48dedf73ce3f4e4a91c97d3a388d6ad52a70c9a22a1d4"
+      },
+      {
+        "path": "seneca-gummere/letter-36.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843872",
+        "revision": 14843872,
+        "sha256": "61951f6a5e83fd3b68917441390db1130f00c8f84a694e18f8daa4551e619c83"
+      },
+      {
+        "path": "seneca-gummere/letter-37.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843873",
+        "revision": 14843873,
+        "sha256": "14f22ec170272a411c7430d3b88d09edfb4b359c578fa5cb28580cec1555a04b"
+      },
+      {
+        "path": "seneca-gummere/letter-38.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843874",
+        "revision": 14843874,
+        "sha256": "6fb455fb38c835c0da89d66ad7a7fb1625676913ad4d842eadb6436b82e159aa"
+      },
+      {
+        "path": "seneca-gummere/letter-39.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843875",
+        "revision": 14843875,
+        "sha256": "4674602acf86a80426c808096fc707bea611d009b4a0743f33734c6a2c5ae839"
+      },
+      {
+        "path": "seneca-gummere/letter-40.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843878",
+        "revision": 14843878,
+        "sha256": "2000f5f8e5b266b6bd5bcfb3f57cb8a206f03b9c496a62d755879ab31b82b616"
+      },
+      {
+        "path": "seneca-gummere/letter-41.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843881",
+        "revision": 14843881,
+        "sha256": "540d7bdd4c4df7e1f5ef90b40bfaa862f67f30afa6bfa4e127f1f5db0948a20b"
+      },
+      {
+        "path": "seneca-gummere/letter-42.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843882",
+        "revision": 14843882,
+        "sha256": "92dd3ba1564595493942819ee2d9c9f50591ea7349737a013b868ea5dfc22377"
+      },
+      {
+        "path": "seneca-gummere/letter-43.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843883",
+        "revision": 14843883,
+        "sha256": "35328061e1f6981a5163109cef653d8d8131c6892232a972d84141ea427987d9"
+      },
+      {
+        "path": "seneca-gummere/letter-44.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843884",
+        "revision": 14843884,
+        "sha256": "414fd6cd339b3dbae6726769e39a6e48405ac34014f95271f23d6893287c00f4"
+      },
+      {
+        "path": "seneca-gummere/letter-45.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843885",
+        "revision": 14843885,
+        "sha256": "18a7957eca12fdebf381bb1c70b4b25b653908d5f64fe86eca964171266e6e48"
+      },
+      {
+        "path": "seneca-gummere/letter-46.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843886",
+        "revision": 14843886,
+        "sha256": "4159d1df9a3676e2c555a75475a7c19a5c30d72bd11e66f6f6036b6cdcc433f7"
+      },
+      {
+        "path": "seneca-gummere/letter-47.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843887",
+        "revision": 14843887,
+        "sha256": "62c4768ceff2ae961350dc8f04b5b545fc150de44d6f909f01715708c3983935"
+      },
+      {
+        "path": "seneca-gummere/letter-48.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843891",
+        "revision": 14843891,
+        "sha256": "91de91356644c4c4144708a8a3ba45c453f28752b70615758f8b78793b32a654"
+      },
+      {
+        "path": "seneca-gummere/letter-49.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14844691",
+        "revision": 14844691,
+        "sha256": "1780346b84144d3a512979c83733dca49f5909355caf852bcf586f2a6f8c092e"
+      },
+      {
+        "path": "seneca-gummere/letter-50.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14844692",
+        "revision": 14844692,
+        "sha256": "2e6498a996f653fe5b7342e314214e94e3b02ca5a0d7126debf91e29c9f85dd8"
+      },
+      {
+        "path": "seneca-gummere/letter-51.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14844694",
+        "revision": 14844694,
+        "sha256": "114ffcf708519076fa3d1f810defce4372e0ae9459ca9c161ae0557800eec0d4"
+      },
+      {
+        "path": "seneca-gummere/letter-52.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14844695",
+        "revision": 14844695,
+        "sha256": "3059c79afc7d63c4238a8e0e946829d35a6d51b13f7d4529f74cb5045da2a9cc"
+      },
+      {
+        "path": "seneca-gummere/letter-53.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843898",
+        "revision": 14843898,
+        "sha256": "de5f667b5452afebdfa0c11c5b009c5c5f14185d050b3cbc7fcd426ac1e6bc0c"
+      },
+      {
+        "path": "seneca-gummere/letter-54.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843899",
+        "revision": 14843899,
+        "sha256": "1d93ce57ebe1d916680dbbb68729ea826746c92a3e6ccf92dc22a5525491a597"
+      },
+      {
+        "path": "seneca-gummere/letter-55.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843901",
+        "revision": 14843901,
+        "sha256": "8b3fc354636ad3b9bdc23fa66640043b0f1980f5c44a8b1ac7515eafb39a85f8"
+      },
+      {
+        "path": "seneca-gummere/letter-56.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14886394",
+        "revision": 14886394,
+        "sha256": "1188c00682bf21e97390da8f71a74f36704cd6e63626f2acdf5497b069f5535c"
+      },
+      {
+        "path": "seneca-gummere/letter-57.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14886397",
+        "revision": 14886397,
+        "sha256": "b10da6e22a1da473956fddde5f770f4141bc5dbf0b410e7a3d39cf76ecea4bf6"
+      },
+      {
+        "path": "seneca-gummere/letter-58.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14886399",
+        "revision": 14886399,
+        "sha256": "1c06a05813a4f663fe468b2eb096bfb47ca395939c64da95485f854304569d9d"
+      },
+      {
+        "path": "seneca-gummere/letter-59.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14886403",
+        "revision": 14886403,
+        "sha256": "26c6282164d6e5fb6a560d95f967b7257beecbdb84b149aea34580efed875518"
+      },
+      {
+        "path": "seneca-gummere/letter-60.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14886408",
+        "revision": 14886408,
+        "sha256": "946ca2fbc9efa0e4f59e0a1b5b3a5ee8baac9cc241a6c78413c73dbedb85872d"
+      },
+      {
+        "path": "seneca-gummere/letter-61.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14886410",
+        "revision": 14886410,
+        "sha256": "5ff672781eec9123be870158e4131b9f4fe79af29e3d76a557ba18423a119fa6"
+      },
+      {
+        "path": "seneca-gummere/letter-62.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14886412",
+        "revision": 14886412,
+        "sha256": "d90f9e26d2969d9d717147955b23b7c72f04cfe3a4ad0cac3be17a7ace0b6b52"
+      },
+      {
+        "path": "seneca-gummere/letter-63.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14886427",
+        "revision": 14886427,
+        "sha256": "1463f82d9ac7678883d327be1de890ec735215798d0f46239cddc39b90769592"
+      },
+      {
+        "path": "seneca-gummere/letter-64.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14886430",
+        "revision": 14886430,
+        "sha256": "faf03ed951b4f27b8f94fd59a3f3f97cf6d5aa87cb50c28cfb3a6ead13f361bd"
+      },
+      {
+        "path": "seneca-gummere/letter-65.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14886431",
+        "revision": 14886431,
+        "sha256": "f1f27aaca71b131837b1f1858d9a00d93e3e0ea1996d0da72195dd0ec26b5349"
+      },
+      {
+        "path": "seneca-gummere/letter-66.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14886434",
+        "revision": 14886434,
+        "sha256": "5067ec37dfce5f435d6e5a79bb84c6832bffdb50730ba9aa2af41fb601648b5c"
+      },
+      {
+        "path": "seneca-gummere/letter-67.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14886435",
+        "revision": 14886435,
+        "sha256": "3b79356a4c4f133b3e4d2b562af057d787745f0328b620a002ab5138e7fb7678"
+      },
+      {
+        "path": "seneca-gummere/letter-68.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14886437",
+        "revision": 14886437,
+        "sha256": "f6f429d0de7cffd81347f81208a4373606e0ff8e32820b63898144c1ac344112"
+      },
+      {
+        "path": "seneca-gummere/letter-69.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14886439",
+        "revision": 14886439,
+        "sha256": "5cfefd300a87965fad62cdd7400a511a1ab365d0e963dc0da20630f6bd5d8b46"
+      },
+      {
+        "path": "seneca-gummere/letter-70.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843926",
+        "revision": 14843926,
+        "sha256": "a75ade1b610cc2e80448c751dbd8237ce07220de95b2af4c70885c289d68776e"
+      },
+      {
+        "path": "seneca-gummere/letter-71.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843928",
+        "revision": 14843928,
+        "sha256": "0c7c808ee0db1ff50ee55095182e73332e4d1743b55ac63411ee1c6ba92bb173"
+      },
+      {
+        "path": "seneca-gummere/letter-72.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843930",
+        "revision": 14843930,
+        "sha256": "8f8c9aab715141cce57faf09f67d080e4f4e486d53e93ee6b17f25884bb9ab16"
+      },
+      {
+        "path": "seneca-gummere/letter-73.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843932",
+        "revision": 14843932,
+        "sha256": "67b74d3bf00e7b50196fdf3cdaa1255a0c545a7f11cc55e6c2bc916b3d5a91c6"
+      },
+      {
+        "path": "seneca-gummere/letter-74.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843936",
+        "revision": 14843936,
+        "sha256": "a0908fc7a8da87342acb40e5807214292c10514d78934d2b7e7e92c73ce1ce8b"
+      },
+      {
+        "path": "seneca-gummere/letter-75.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843938",
+        "revision": 14843938,
+        "sha256": "47d4dd6661109d27340defb42801821e88cae61fff745cc3d5ec6d00ded28999"
+      },
+      {
+        "path": "seneca-gummere/letter-76.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843939",
+        "revision": 14843939,
+        "sha256": "56bb8ed6814c45c6d942adef96dff5730defdda1bb30467d8c0105aaa83622a3"
+      },
+      {
+        "path": "seneca-gummere/letter-77.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843941",
+        "revision": 14843941,
+        "sha256": "166a6506d3b2d7d8731db7a953d727fe61896d1d888f6d2f36a249e5e5c89e3d"
+      },
+      {
+        "path": "seneca-gummere/letter-78.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843943",
+        "revision": 14843943,
+        "sha256": "93604a999b78b0586c7c282e5ff41ee692c8484ea1cc0f76d7fb261de1f1d41c"
+      },
+      {
+        "path": "seneca-gummere/letter-79.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843944",
+        "revision": 14843944,
+        "sha256": "1b288039ee98f3da6d962ceceb14c866f892de71eb258708e7046ed258d44600"
+      },
+      {
+        "path": "seneca-gummere/letter-80.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843947",
+        "revision": 14843947,
+        "sha256": "be762a0a881202b5da7c258638b42d70c38646d0c21000fc50dbd519bc02c822"
+      },
+      {
+        "path": "seneca-gummere/letter-81.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843948",
+        "revision": 14843948,
+        "sha256": "987915a4c187ab97abe95adfbbacc4fe225dea083d297f9e82c91ac14d397f55"
+      },
+      {
+        "path": "seneca-gummere/letter-82.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843949",
+        "revision": 14843949,
+        "sha256": "08667c4ad802a1fd9ee4ee97cd9c129e28f50f5a231b6f0ae017f9fbdc4bb73d"
+      },
+      {
+        "path": "seneca-gummere/letter-83.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843950",
+        "revision": 14843950,
+        "sha256": "b2e7110383cf348eb57b96bb7727a8735dc31375b0c0aa31cb44673c80de1cda"
+      },
+      {
+        "path": "seneca-gummere/letter-84.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843951",
+        "revision": 14843951,
+        "sha256": "f45c2bbaa0904ec4bc007b0e028487387df590bebc918fb62882c444f61769a5"
+      },
+      {
+        "path": "seneca-gummere/letter-85.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843953",
+        "revision": 14843953,
+        "sha256": "29d7375b17510f22c60b62c0d591409ddd0c2159d412987d03e8e0d938629d38"
+      },
+      {
+        "path": "seneca-gummere/letter-86.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843954",
+        "revision": 14843954,
+        "sha256": "c6f3e86c70affe3a845a96a53a92850025d212cdb18587a27e0dbcd4375110ff"
+      },
+      {
+        "path": "seneca-gummere/letter-87.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843955",
+        "revision": 14843955,
+        "sha256": "fff9f335ada64ffebb8b23753c4016d154c06cf78d96e58804368f5461b671dd"
+      },
+      {
+        "path": "seneca-gummere/letter-88.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843956",
+        "revision": 14843956,
+        "sha256": "ad76f3e7be749910c515206b2ca4246c99b9b8b8401460dff8ba06f1aedd9432"
+      },
+      {
+        "path": "seneca-gummere/letter-89.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843957",
+        "revision": 14843957,
+        "sha256": "26d35c0e6d63c780d4c4366bd615bf587e65158282fec439937e7a5f70af6aae"
+      },
+      {
+        "path": "seneca-gummere/letter-90.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843960",
+        "revision": 14843960,
+        "sha256": "d1e50bb58d5b0796e9ebd7f6800057c8143a35571b68a4f618b3961da17de07f"
+      },
+      {
+        "path": "seneca-gummere/letter-91.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843962",
+        "revision": 14843962,
+        "sha256": "4ddc921e349cfe8ae4f4ae35bce2011088c1777f209700409bc5bc3b368e19d4"
+      },
+      {
+        "path": "seneca-gummere/letter-92.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843964",
+        "revision": 14843964,
+        "sha256": "7dc4f5813dcf5143ed6c5fc05d916c2cfada32e67cb0b0bad9eac17f9a251325"
+      },
+      {
+        "path": "seneca-gummere/letter-93.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843965",
+        "revision": 14843965,
+        "sha256": "0f2e7e251e760823b6cd2cd71d4a24e9d457e04546c83ea57a8b20a4b8690f52"
+      },
+      {
+        "path": "seneca-gummere/letter-94.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843966",
+        "revision": 14843966,
+        "sha256": "f9097254b50d35fe437956b6b431e4b4d2fed921252e9454ab8ce464d90d845c"
+      },
+      {
+        "path": "seneca-gummere/letter-95.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843969",
+        "revision": 14843969,
+        "sha256": "862eac8148a9c0ef5370c3ac4f303dddf3925a2b1a25468944952668eccb9238"
+      },
+      {
+        "path": "seneca-gummere/letter-96.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843970",
+        "revision": 14843970,
+        "sha256": "e8b9aef6862aff12e3fa0a098577cd9afa652f1eace8e9cc8d32e03228b3a17c"
+      },
+      {
+        "path": "seneca-gummere/letter-97.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843971",
+        "revision": 14843971,
+        "sha256": "a2f9aadc82df7ae726a341422f12ca54698b17a8c2fe908176963f3f3642a6e5"
+      },
+      {
+        "path": "seneca-gummere/letter-98.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843973",
+        "revision": 14843973,
+        "sha256": "f7faf84ecf3eac66ef7a54de43f93a295bb789d6c1eaf4008465aeccb3e0a092"
+      },
+      {
+        "path": "seneca-gummere/letter-99.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843975",
+        "revision": 14843975,
+        "sha256": "5e2d7a35ecde7e4ce1281aaf7387bdc8001e21f14497e9a0864c35d577285e50"
+      },
+      {
+        "path": "seneca-gummere/letter-100.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843977",
+        "revision": 14843977,
+        "sha256": "b54dc3cbe0ee96e775e74f0f8637309c8e2c179ec25bb0201f7974c85aabfc3c"
+      },
+      {
+        "path": "seneca-gummere/letter-101.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843979",
+        "revision": 14843979,
+        "sha256": "b1313ce37472c866a5b8aeb000f38f476ac1ef84ecab4f85542e97212bd9d20e"
+      },
+      {
+        "path": "seneca-gummere/letter-102.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843981",
+        "revision": 14843981,
+        "sha256": "64ebe1c2d8092d6a5df1a55fd872406bb05ede4a8cf9e78efb48cc1a0037249b"
+      },
+      {
+        "path": "seneca-gummere/letter-103.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843982",
+        "revision": 14843982,
+        "sha256": "212ad7528c4969d16e97d75151b851a6b530e9cee18d60eb47b748c08ddc2a74"
+      },
+      {
+        "path": "seneca-gummere/letter-104.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843983",
+        "revision": 14843983,
+        "sha256": "3c69f98aa0889c858b0cbb32442d4d19516a12048fd8df10b4bcfc9e69894ecc"
+      },
+      {
+        "path": "seneca-gummere/letter-105.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843985",
+        "revision": 14843985,
+        "sha256": "11430082a7e5655e9cb1c4e4edf8fc1ff60a8ff45eccf40fc2511dbced94a662"
+      },
+      {
+        "path": "seneca-gummere/letter-106.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843987",
+        "revision": 14843987,
+        "sha256": "35997986b4b9c1c69f328d49dae627e337844d893bd0a65cdacd84cc0bea99f8"
+      },
+      {
+        "path": "seneca-gummere/letter-107.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843989",
+        "revision": 14843989,
+        "sha256": "436f4a9746fa8b49b686f27a3e7c95cc174c4b3fa6020769c6a4663f6ce599f8"
+      },
+      {
+        "path": "seneca-gummere/letter-108.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843991",
+        "revision": 14843991,
+        "sha256": "9da2558c285fc5cdee4f42dd91566e9b840c4ec0384f04fc500dedd793bd9c45"
+      },
+      {
+        "path": "seneca-gummere/letter-109.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843992",
+        "revision": 14843992,
+        "sha256": "5ab06775a539da5787af754a81b298d679341a93007a67b97b02e011df506ff8"
+      },
+      {
+        "path": "seneca-gummere/letter-110.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843997",
+        "revision": 14843997,
+        "sha256": "84676a67098fbaad8c6371ae2167b69d1befc5a9b0d2c473b371c6d9d18eb389"
+      },
+      {
+        "path": "seneca-gummere/letter-111.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14843998",
+        "revision": 14843998,
+        "sha256": "ed5b75337dae977c3cc2034bfe8e5a130f3e84109772db4b06c91089930094ba"
+      },
+      {
+        "path": "seneca-gummere/letter-112.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14844001",
+        "revision": 14844001,
+        "sha256": "09910e5e95373015fcf4e49a635cb13311ed067741cd8672b1101687995fd081"
+      },
+      {
+        "path": "seneca-gummere/letter-113.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14844700",
+        "revision": 14844700,
+        "sha256": "a78c0d94f0e4377189c66e97664c961d60da901d0b42c735d9b9b33bd95ae980"
+      },
+      {
+        "path": "seneca-gummere/letter-114.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14844701",
+        "revision": 14844701,
+        "sha256": "7022073f20c3298e3f7ebd7b0e67494181159824286fc2749ee5fb2aa1e44956"
+      },
+      {
+        "path": "seneca-gummere/letter-115.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14844006",
+        "revision": 14844006,
+        "sha256": "20be85b90f4158db59e203349d865eab0561d2df38a271e8ddce4237fae8a480"
+      },
+      {
+        "path": "seneca-gummere/letter-116.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14844009",
+        "revision": 14844009,
+        "sha256": "f6257e6cb78acc257c0ebed9bf608ecf453368714e0cf36b3ce4504c7772124a"
+      },
+      {
+        "path": "seneca-gummere/letter-117.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14844010",
+        "revision": 14844010,
+        "sha256": "d131e60d673351f1c2bf1445b64f90552c300300483c8fd10207e9639aef3714"
+      },
+      {
+        "path": "seneca-gummere/letter-118.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14844011",
+        "revision": 14844011,
+        "sha256": "b24f81d535a8a266f3183f9c2b74b72e825fd25c0565bb34af76edfe5a4b0e4e"
+      },
+      {
+        "path": "seneca-gummere/letter-119.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14844013",
+        "revision": 14844013,
+        "sha256": "475c822c33ae9c20d61d782a5d95ddc3a63f79ef89776bb7ebae659ae2f8c370"
+      },
+      {
+        "path": "seneca-gummere/letter-120.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14844014",
+        "revision": 14844014,
+        "sha256": "b3beaff7ba16c76e4df70f6955b9a97223e8a4837f2a4db334d60dced780c9b2"
+      },
+      {
+        "path": "seneca-gummere/letter-121.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14844015",
+        "revision": 14844015,
+        "sha256": "371597338509be9d8603c2512575b34bcdfe7c4fa9502b987763f3e837aef1ac"
+      },
+      {
+        "path": "seneca-gummere/letter-122.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14844018",
+        "revision": 14844018,
+        "sha256": "b16e6601b1efc7fd3e7c5222b07324a2e66a21087ea4f8df112ebd3b03f141c0"
+      },
+      {
+        "path": "seneca-gummere/letter-123.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14844019",
+        "revision": 14844019,
+        "sha256": "a55765d213043b3cd7a4f61e622257d41886488d1da433911b0b31accd08ff48"
+      },
+      {
+        "path": "seneca-gummere/letter-124.html",
+        "url": "https://en.wikisource.org/w/index.php?oldid=14844022",
+        "revision": 14844022,
+        "sha256": "1931d0f7930086bff92ab0bd6e6418860c73d646ec289ea32a5369a4b359b329"
+      }
+    ]
+  }
+]
