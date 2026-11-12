@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:csv/csv.dart';
@@ -17,13 +15,23 @@ class QuotesScreen extends StatefulWidget {
 class _QuotesScreenState extends State<QuotesScreen> {
   List<Map<String, String>> quotes = [];
   int currIndex = 0;
-  List<Map<String, String>> favoriteQuotes = [];
-  bool isFavorite() => favoriteQuotes.contains(quotes[currIndex]);
+  // Favorites are tracked by quote text, so lookups compare content, not object identity.
+  Set<String> favoriteTexts = {};
+  bool isFavorite() =>
+      quotes.isNotEmpty && favoriteTexts.contains(quotes[currIndex]['quote']);
 
   @override
   void initState() {
     super.initState();
     loadQuotes();
+    loadFavorites();
+  }
+
+  Future<void> loadFavorites() async {
+    final rows = await DBHelper().getFavorites();
+    setState(() {
+      favoriteTexts = rows.map((row) => row['quote'].toString()).toSet();
+    });
   }
 
   Future<void> loadQuotes() async {
@@ -38,7 +46,8 @@ class _QuotesScreenState extends State<QuotesScreen> {
           'quote': row[0].toString(),
           'author': row[1].toString(),
         };
-      }).toList();
+      }).toList()
+        ..shuffle(); // random order, no repeats until the list wraps
     });
   }
 
@@ -60,10 +69,10 @@ class _QuotesScreenState extends State<QuotesScreen> {
 
     if(isFavorite()){
       await dbHelper.deleteFavorite(currentQuote['quote']!);
-      favoriteQuotes.remove(currentQuote);
+      favoriteTexts.remove(currentQuote['quote']);
     } else {
       await dbHelper.insertFavorite(currentQuote['quote']!, currentQuote['author']!,);
-      favoriteQuotes.add(currentQuote);
+      favoriteTexts.add(currentQuote['quote']!);
     }
     setState(() {});
   }
@@ -74,7 +83,7 @@ class _QuotesScreenState extends State<QuotesScreen> {
       MaterialPageRoute(
         builder: (context) => FavoritesScreen(),
       ),
-    );
+    ).then((_) => loadFavorites()); // refresh in case favorites were removed there
   }
 
   void openContactInfo() {
@@ -141,7 +150,7 @@ class _QuotesScreenState extends State<QuotesScreen> {
                       child: Column(
                         children: [
                           Text(
-                            quotes[Random().nextInt(quotes.length)]['quote'] ?? '',
+                            quotes[currIndex]['quote'] ?? '',
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 fontSize: 24,
@@ -151,7 +160,7 @@ class _QuotesScreenState extends State<QuotesScreen> {
                           ),
                           SizedBox(height: 10),
                           Text(
-                            '-${quotes[Random().nextInt(quotes.length)]['author'] ?? ''}-',
+                            '-${quotes[currIndex]['author'] ?? ''}-',
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 fontSize: 18, color: Colors.amber[300]),
