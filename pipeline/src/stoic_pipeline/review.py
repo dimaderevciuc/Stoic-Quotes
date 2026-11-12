@@ -77,7 +77,8 @@ def review_file(path: Path, include_reviewed: bool) -> bool:
             index += 1
             continue
         _show(quote, f"[{path.name} {index + 1}/{len(quotes)}]")
-        choice = typer.prompt("\n[a]pprove [e]dit [r]eject [s]kip [q]uit", default="s").lower()
+        # No default: a bare Enter must not silently skip an entry.
+        choice = typer.prompt("\n[a]pprove [e]dit [r]eject [s]kip [q]uit").strip().lower()
         if choice == "a":
             quotes[index] = quote.model_copy(update={"reviewed": True})
         elif choice == "e":
