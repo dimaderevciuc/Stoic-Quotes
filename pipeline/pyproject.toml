@@ -27,6 +27,7 @@ stoic-curate = "stoic_pipeline.curate:app"
 stoic-review = "stoic_pipeline.review:app"
 stoic-legacy = "stoic_pipeline.legacy:app"
 stoic-embed = "stoic_pipeline.embed:app"
+stoic-situations = "stoic_pipeline.situations:app"
 
 [build-system]
 requires = ["uv_build>=0.12.23,<0.13.0"]

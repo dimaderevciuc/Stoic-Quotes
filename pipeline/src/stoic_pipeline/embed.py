@@ -79,6 +79,8 @@ class EvalCase(BaseModel):
     id: str
     text: str
     relevant: list[str]
+    # Situation ids that would be a right match (empty: none fits, fall back to quotes).
+    situations: list[str] = []
 
 
 @dataclass(frozen=True)
@@ -333,6 +335,17 @@ def export_cmd(mode: str = typer.Option(DEFAULT_MODE, "--mode")) -> None:
     dq, dscales = quantize_rows(embed_quotes(encoder, quotes, mode))
     write_matrix(ASSETS / "quotes.bin", dq, dscales)
 
+    # Situations: vectors for matching plus the content the app shows.
+    from stoic_pipeline.situations import DEFAULT_THRESHOLD, load_situations, situation_vectors
+
+    situations = load_situations()
+    sq, sscales = quantize_rows(situation_vectors(encoder, situations))
+    write_matrix(ASSETS / "situations.bin", sq, sscales)
+    situation_content = [s.model_dump(exclude={"example_phrases", "reviewed"}) for s in situations]
+    (ASSETS / "situations.json").write_text(
+        json.dumps(situation_content, ensure_ascii=False, separators=(",", ":")), encoding="utf-8"
+    )
+
     config = {
         "model": spec.repo,
         "revision": spec.revision,
@@ -348,6 +361,8 @@ def export_cmd(mode: str = typer.Option(DEFAULT_MODE, "--mode")) -> None:
         "continuing_subword_prefix": tokenizer["model"]["continuing_subword_prefix"],
         "max_input_chars_per_word": tokenizer["model"]["max_input_chars_per_word"],
         "quote_ids": [quote.id for quote in quotes],
+        "situation_ids": [situation.id for situation in situations],
+        "situation_threshold": DEFAULT_THRESHOLD,
     }
     (ASSETS / "config.json").write_text(json.dumps(config, indent=1) + "\n", encoding="utf-8")
     sizes = {p.name: p.stat().st_size / 1e6 for p in sorted(ASSETS.iterdir())}
@@ -382,6 +397,8 @@ def parity_cmd() -> None:
     require(encoder.file_sha256() == config["onnx_sha256"], "model file changed since export")
     docs = dequantize(*read_matrix(ASSETS / "quotes.bin"))
     ids: list[str] = config["quote_ids"]
+    sit_vecs = dequantize(*read_matrix(ASSETS / "situations.bin"))
+    sit_ids: list[str] = config["situation_ids"]
     sentences = [c.text for c in load_eval()[:20]] + list(PARITY_EXTRA)
     cases = []
     for sentence in sentences:
@@ -394,6 +411,10 @@ def parity_cmd() -> None:
                 "token_ids": token_ids,
                 "top5": [
                     {"id": ids[i], "score": round(float(scores[i]), 6)} for i in top_k(query, docs)
+                ],
+                "top3_situations": [
+                    {"id": sit_ids[i], "score": round(float((sit_vecs @ query)[i]), 6)}
+                    for i in top_k(query, sit_vecs, 3)
                 ],
                 # The Python query vector, so the Dart search can be checked on its own.
                 "query": [round(float(v), 6) for v in query],

@@ -176,3 +176,75 @@ class Quote(StrictModel):
         if clean(self.text) not in clean(self.context):
             raise ValueError(f"{self.id}: quote text is not an exact substring of its context")
         return self
+
+
+# --- Situations (Phase 3) ----------------------------------------------------------------
+
+SITUATION_CATEGORIES: frozenset[str] = frozenset(
+    {
+        "work",
+        "study",
+        "relationships",
+        "family",
+        "friendship",
+        "loss",
+        "health",
+        "anxiety",
+        "anger",
+        "self",
+        "habits",
+        "money",
+        "change",
+        "purpose",
+        "success",
+        "aging-death",
+        "world",
+    }
+)
+SITUATION_ID_PATTERN = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
+
+
+def _has_dash(value: str) -> bool:
+    return "\u2014" in value or "\u2013" in value
+
+
+class Situation(StrictModel):
+    """A common problem with pre-written, reviewed help: matched quotes and one exercise."""
+
+    id: str = Field(pattern=SITUATION_ID_PATTERN.pattern)
+    title: str = Field(min_length=3, max_length=80)
+    category: str
+    # Ways people actually describe it. The situation's vector is their mean.
+    example_phrases: list[str] = Field(min_length=6, max_length=10)
+    quote_ids: list[str] = Field(min_length=3, max_length=5)
+    # quote id -> one or two sentences on how this quote applies here
+    applications: dict[str, str]
+    # One concrete practice, 2 to 4 short steps.
+    exercise: list[str] = Field(min_length=2, max_length=4)
+    is_sensitive: bool
+    reviewed: bool = False
+
+    @field_validator("category")
+    @classmethod
+    def _known_category(cls, value: str) -> str:
+        if value not in SITUATION_CATEGORIES:
+            raise ValueError(f"unknown category {value!r}")
+        return value
+
+    @model_validator(mode="after")
+    def _consistent(self) -> Situation:
+        if len(set(self.quote_ids)) != len(self.quote_ids):
+            raise ValueError(f"{self.id}: duplicate quote ids")
+        if set(self.applications) != set(self.quote_ids):
+            raise ValueError(f"{self.id}: applications must cover exactly the quote ids")
+        if len({p.lower() for p in self.example_phrases}) != len(self.example_phrases):
+            raise ValueError(f"{self.id}: duplicate example phrases")
+        own_writing = [
+            self.title,
+            *self.example_phrases,
+            *self.applications.values(),
+            *self.exercise,
+        ]
+        if any(_has_dash(text) for text in own_writing):
+            raise ValueError(f"{self.id}: no em or en dashes in our own writing")
+        return self

@@ -18,6 +18,8 @@ uv run stoic-embed eval          # compare models on golden/eval_situations.json
 uv run stoic-embed export        # model + quote vectors -> ../assets/embedding/ (int8)
 uv run stoic-embed parity        # golden/parity.json, checked by the Dart tests
 uv run stoic-embed fetch         # download the pinned model into ../assets (not in git)
+uv run stoic-situations validate # situation library: schema, quote links, taxonomy
+uv run stoic-situations tune     # threshold sweep -> golden/situation_report.md
 uv run ruff check && uv run pytest
 ```
 
@@ -70,3 +72,14 @@ Every file is pinned in `data/sources.json` by URL, Wikisource revision id and S
 - The model file is not in git: after cloning run `uv run stoic-embed fetch`.
 - After any change to the curated quotes: `export`, then `parity`, then in the repo
   root `flutter test` and `flutter test integration_test -d linux`.
+
+## Situations (Phase 3)
+
+- `data/situations/taxonomy.jsonl`: 151 situations in 17 categories, approved by Dima.
+- `data/situations/situations.jsonl`: per situation 7 example phrases, 3 to 4 hand-picked
+  quotes with "how it applies", and a 2 to 4 step exercise. Written and marked reviewed
+  by Claude at Dima's request (2026-11-12); Dima will flag changes while using the app.
+- Loss (people, pets, pregnancy) and health situations use only gentle, hopeful quotes.
+  Abuse situations start the exercise with 112 / 142 / findahelpline.com.
+- Match threshold 0.90 (`stoic-situations tune`). Export writes `situations.bin` and
+  `situations.json` next to the model.
