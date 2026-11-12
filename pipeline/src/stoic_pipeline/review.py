@@ -11,11 +11,14 @@ they are not proposed again. The file is saved after every action.
 from __future__ import annotations
 
 import json
+import subprocess
 from pathlib import Path
 
 import typer
 from pydantic import ValidationError
 
+from stoic_pipeline.console import clear_screen, edit_text, pause
+from stoic_pipeline.curate import check_against_passage, load_passages
 from stoic_pipeline.jsonl import read_jsonl, write_jsonl
 from stoic_pipeline.paths import CURATED
 from stoic_pipeline.schema import Quote
@@ -24,7 +27,7 @@ REJECTED = CURATED / "rejected.jsonl"
 
 
 def _show(quote: Quote, position: str) -> None:
-    typer.clear()
+    clear_screen()
     typer.secho(f"{position}  {quote.id}  ({quote.citation}, tr. {quote.translator})", bold=True)
     typer.echo(f"\n  \u201c{quote.text}\u201d\n")
     typer.secho(f"  Explanation: {quote.explanation}", fg="cyan")
@@ -35,15 +38,27 @@ def _show(quote: Quote, position: str) -> None:
 def _edit(quote: Quote) -> Quote | None:
     """Open the quote as JSON in $EDITOR; return the edited quote or None if unchanged."""
     original = json.dumps(quote.model_dump(), indent=2, ensure_ascii=False)
-    edited = typer.edit(original, extension=".json")
-    if edited is None or edited == original:
+    try:
+        edited = edit_text(original, suffix=".json")
+    except (RuntimeError, OSError, subprocess.CalledProcessError) as error:
+        typer.secho(f"Could not open an editor: {error}", fg="red")
+        pause()
+        return None
+    if edited.strip() == original.strip():
         return None
     try:
-        return Quote.model_validate_json(edited)
+        quote = Quote.model_validate_json(edited)
     except ValidationError as error:
         typer.secho(f"Not saved, invalid entry:\n{error}", fg="red")
-        typer.pause()
+        pause()
         return None
+    # The edit must still agree with the real source passage (text, context, citation).
+    problems = check_against_passage(quote, load_passages())
+    if problems:
+        typer.secho("Not saved:\n" + "\n".join(problems), fg="red")
+        pause()
+        return None
+    return quote
 
 
 def _append_rejected(quote: Quote) -> None:
