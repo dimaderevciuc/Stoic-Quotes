@@ -153,21 +153,28 @@ class _QuoteCardState extends State<QuoteCard> {
                 children: [
                   // Flexible: with large system text the label shortens
                   // instead of pushing the icons off screen.
-                  if (widget.onOpen == null)
-                    Flexible(
-                      child: TextButton.icon(
-                        onPressed: () => setState(() => _expanded = !_expanded),
-                        icon: Icon(
-                          _expanded ? Icons.expand_less : Icons.expand_more,
-                        ),
-                        label: Text(
-                          _expanded ? 'Hide passage' : 'Read the passage',
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                      ),
-                    )
-                  else
-                    const Spacer(),
+                  // Expanded + Align: icons stay at the right edge, and with
+                  // large system text the label shortens instead of overflowing.
+                  Expanded(
+                    child: widget.onOpen != null
+                        ? const SizedBox.shrink()
+                        : Align(
+                            alignment: Alignment.centerLeft,
+                            child: TextButton.icon(
+                              onPressed: () =>
+                                  setState(() => _expanded = !_expanded),
+                              icon: Icon(
+                                _expanded
+                                    ? Icons.expand_less
+                                    : Icons.expand_more,
+                              ),
+                              label: Text(
+                                _expanded ? 'Hide passage' : 'Read the passage',
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                            ),
+                          ),
+                  ),
                   IconButton(
                     tooltip: 'Share as image',
                     onPressed: () => shareQuoteImage(_shareKey, q),

@@ -138,20 +138,26 @@ class _SituationScreenState extends ConsumerState<SituationScreen> {
               ),
               onChanged: (_) => setState(() {}),
             ),
-            Wrap(
-              spacing: 8,
-              runSpacing: 8,
-              children: [
-                for (final example in SituationScreen.examples)
-                  ActionChip(
-                    label: Text(example),
-                    onPressed: () {
-                      _controller.text = example;
-                      setState(() {});
-                      _reflect();
-                    },
-                  ),
-              ],
+            // One row that scrolls sideways keeps the Reflect button in view.
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              clipBehavior: Clip.none,
+              child: Row(
+                children: [
+                  for (final example in SituationScreen.examples)
+                    Padding(
+                      padding: const EdgeInsets.only(right: 8),
+                      child: ActionChip(
+                        label: Text(example),
+                        onPressed: () {
+                          _controller.text = example;
+                          setState(() {});
+                          _reflect();
+                        },
+                      ),
+                    ),
+                ],
+              ),
             ),
             const SizedBox(height: 16),
             FilledButton.icon(

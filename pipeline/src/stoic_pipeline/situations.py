@@ -51,6 +51,14 @@ def load_situations() -> list[Situation]:
     return read_jsonl(SITUATIONS_FILE, Situation)
 
 
+def _repeats(application: str, explanation: str) -> bool:
+    """A near copy (small rewording counts too) adds nothing to the card."""
+    from rapidfuzz import fuzz
+
+    a, e = application.strip().lower(), explanation.strip().lower()
+    return a.rstrip(".") in e or fuzz.ratio(a, e) >= 70
+
+
 def validate_situations(situations: list[Situation]) -> list[str]:
     """Every rule beyond the schema: links to quotes and taxonomy, no test leakage."""
     problems: list[str] = []
@@ -78,7 +86,7 @@ def validate_situations(situations: list[Situation]) -> list[str]:
         problems += [
             f"{s.id}: application for {q} repeats its explanation"
             for q, text in s.applications.items()
-            if q in quotes and text.strip().rstrip(".").lower() in quotes[q].explanation.lower()
+            if q in quotes and _repeats(text, quotes[q].explanation)
         ]
         # A phrase identical to a test sentence would make the tuning numbers lie.
         problems += [
