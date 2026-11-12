@@ -28,6 +28,7 @@ uv run ruff check && uv run pytest
 | Meditations | George Long | 1862 | Project Gutenberg #15877 |
 | Discourses, Enchiridion | George Long | 1877 | Wikisource |
 | Moral Letters to Lucilius | Richard M. Gummere | 1917, 1920, 1925 | Wikisource (Loeb) |
+| Of Anger, Consolations to Marcia, Helvia, Polybius (Seneca) | Aubrey Stewart | 1889 | Project Gutenberg #64576 |
 | As a Man Thinketh (James Allen) | written in English | 1903 | Project Gutenberg #4507 |
 
 Every file is pinned in `data/sources.json` by URL, Wikisource revision id and SHA-256.
@@ -48,6 +49,12 @@ Every file is pinned in `data/sources.json` by URL, Wikisource revision id and S
 - As a Man Thinketh: not Stoic, added on request. Passages claiming that illness,
   poverty or oppression are caused by the sufferer's own thoughts (chapters 2, 3, 5)
   are not used, nor the verses and long passages Allen quotes from others.
+- Seneca, Dialogues (Stewart): only Of Anger and the three Consolations. Skipped: passages
+  praising death as a release (Marcia 19 to 23, Of Anger 3.15), lines about enduring
+  abuse, dated remarks about women, and the flattery of Claudius in To Polybius.
+- Approval: the 45 Stewart quotes (`quotes_seneca_dialogues.jsonl`, added 2026-11-12) were
+  marked reviewed by Claude at Dima's request, not read by a person. Dima will flag any to
+  drop while using the app.
 - Rejected entries are kept in `data/curated/rejected.jsonl`.
 
 ## Embeddings (Phase 2)

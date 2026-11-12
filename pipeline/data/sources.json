@@ -1359,6 +1359,23 @@
     ]
   },
   {
+    "id": "seneca-stewart",
+    "author": "Seneca",
+    "work": "Dialogues",
+    "title": "Minor Dialogues, Together with the Dialogue on Clemency",
+    "translator": "Aubrey Stewart",
+    "year": 1889,
+    "year_note": "Bohn's Classical Library, George Bell and Sons, London 1889 (stated in the file). Only Of Anger and the three Consolations are curated.",
+    "files": [
+      {
+        "path": "seneca-stewart/pg64576.txt",
+        "url": "https://www.gutenberg.org/cache/epub/64576/pg64576.txt",
+        "revision": null,
+        "sha256": "ff92ddd84505a319d6346113900312315ab58e0ff46570fdb808c5995c5a483b"
+      }
+    ]
+  },
+  {
     "id": "allen-thinketh",
     "author": "James Allen",
     "work": "As a Man Thinketh",

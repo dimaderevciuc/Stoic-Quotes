@@ -312,6 +312,96 @@ def split_allen(raw: str, source: Source) -> Iterator[Passage]:
         raise ValueError(f"As a Man Thinketh: found {chapter} chapters")
 
 
+# --- Seneca, Dialogues, tr. Aubrey Stewart 1889 (Project Gutenberg #64576) -----------------
+
+# (passage id prefix, citation prefix, heading that starts it, heading that starts the next part)
+STEWART_PARTS = (
+    (
+        "sen-anger-1",
+        "Of Anger 1.",
+        "THE THIRD BOOK OF THE DIALOGUES",
+        "THE FOURTH BOOK OF THE DIALOGUES",
+    ),
+    (
+        "sen-anger-2",
+        "Of Anger 2.",
+        "THE FOURTH BOOK OF THE DIALOGUES",
+        "THE FIFTH BOOK OF THE DIALOGUES",
+    ),
+    (
+        "sen-anger-3",
+        "Of Anger 3.",
+        "THE FIFTH BOOK OF THE DIALOGUES",
+        "THE SIXTH BOOK OF THE DIALOGUES",
+    ),
+    (
+        "sen-marcia",
+        "Consolation to Marcia ",
+        "THE SIXTH BOOK OF THE DIALOGUES",
+        "THE SEVENTH BOOK OF THE DIALOGUES",
+    ),
+    (
+        "sen-helvia",
+        "Consolation to Helvia ",
+        "THE ELEVENTH BOOK OF THE DIALOGUES",
+        "THE TWELFTH BOOK OF THE DIALOGUES",
+    ),
+    (
+        "sen-polybius",
+        "Consolation to Polybius ",
+        "THE TWELFTH BOOK OF THE DIALOGUES",
+        "\nON CLEMENCY.",
+    ),
+)
+_STEWART_BODY_START = re.compile(r"\n(?:Book [IV]+\.|OF CONSOLATION\.)\n")
+_FOOTNOTE_BLOCK = re.compile(r"^\[\d+\] ", re.M)  # footnote bodies follow each dialogue
+_PAGE_MARK = re.compile(r"\{\d+\}")  # printed page numbers, e.g. {49}
+_NOTE_MARK = re.compile(r"\[\d+\]")  # footnote references in the text
+_CHAPTER = re.compile(r"^([IVXLC]+)\. ")
+
+
+def _stewart_part(text: str, start: str, end: str) -> str:
+    begin = text.index(start)
+    part = text[begin : text.index(end, begin + len(start))]
+    part = part[_STEWART_BODY_START.search(part).end() :]  # type: ignore[union-attr]
+    notes = _FOOTNOTE_BLOCK.search(part)
+    return part[: notes.start()] if notes else part
+
+
+def split_stewart(raw: str, source: Source) -> Iterator[Passage]:
+    """One passage per paragraph, cited by book and chapter (Of Anger 1.2) or chapter."""
+    text = strip_gutenberg_boilerplate(raw).replace("\r\n", "\n")
+    for id_prefix, cite_prefix, start, end in STEWART_PARTS:
+        # Of Anger books 1 and 2 open without a numeral: the first chapter is implicit.
+        chapter, paragraph = 1, 0
+        for block in re.split(r"\n\s*\n", _stewart_part(text, start, end)):
+            lines = [line for line in block.split("\n") if line.strip()]
+            # Skip empty blocks, page marks alone, and indented verse quoted from poets.
+            if not lines or all(line.startswith("    ") for line in lines):
+                continue
+            body = _PAGE_MARK.sub("", "\n".join(lines)).strip()
+            if not body:
+                continue
+            numeral = _CHAPTER.match(body)
+            if numeral:
+                number = roman_to_int(numeral.group(1))
+                if number != chapter + 1 and not (number == 1 and paragraph == 0):
+                    raise ValueError(f"{id_prefix}: chapter {number} after {chapter}")
+                chapter, paragraph = number, 0
+                body = body[numeral.end() :]
+            paragraph += 1
+            yield Passage(
+                id=f"{id_prefix}-{chapter}-p{paragraph}",
+                source_id=source.id,
+                author=source.author,
+                work=source.work,
+                citation=f"{cite_prefix}{chapter}",
+                translator=source.translator,
+                year=source.year,
+                text=clean(_ITALIC_MARK.sub(r"\1", _NOTE_MARK.sub("", body))),
+            )
+
+
 # --- Driver ---------------------------------------------------------------------------------
 
 
@@ -327,6 +417,8 @@ def split_source(source: Source) -> list[Passage]:
             passages.extend(split_discourse_chapter(path, source))
         elif source.id == "allen-thinketh":
             passages.extend(split_allen(path.read_text(encoding="utf-8"), source))
+        elif source.id == "seneca-stewart":
+            passages.extend(split_stewart(path.read_text(encoding="utf-8"), source))
         elif source.id == "seneca-gummere":
             passages.extend(split_seneca_letter(path, source))
         else:

@@ -80,6 +80,19 @@ AS_A_MAN_THINKETH = GutenbergSpec(
 )
 
 
+SENECA_DIALOGUES = GutenbergSpec(
+    source_id="seneca-stewart",
+    ebook_id=64576,
+    author="Seneca",
+    work="Dialogues",
+    title="Minor Dialogues, Together with the Dialogue on Clemency",
+    translator="Aubrey Stewart",
+    year=1889,
+    year_note="Bohn's Classical Library, George Bell and Sons, London 1889 (stated in the "
+    "file). Only Of Anger and the three Consolations are curated.",
+)
+
+
 def _epictetus_pages() -> list[str]:
     chapters_per_book = {1: 30, 2: 26, 3: 26, 4: 13}
     pages = [
@@ -225,12 +238,20 @@ def verify_checksums(sources: list[Source]) -> list[str]:
 app = typer.Typer(help="Download the public domain source texts.")
 
 
-SOURCE_IDS = ("meditations-long", "epictetus-long", "seneca-gummere", "allen-thinketh")
+SOURCE_IDS = (
+    "meditations-long",
+    "epictetus-long",
+    "seneca-gummere",
+    "seneca-stewart",
+    "allen-thinketh",
+)
 
 
 def _download(client: httpx.Client, source_id: str) -> Source:
     if source_id == MEDITATIONS.source_id:
         return download_gutenberg(client, MEDITATIONS)
+    if source_id == SENECA_DIALOGUES.source_id:
+        return download_gutenberg(client, SENECA_DIALOGUES)
     if source_id == AS_A_MAN_THINKETH.source_id:
         return download_gutenberg(client, AS_A_MAN_THINKETH)
     if source_id == EPICTETUS.source_id:
