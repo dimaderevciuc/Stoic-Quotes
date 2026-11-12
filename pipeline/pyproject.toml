@@ -1,0 +1,38 @@
+[project]
+name = "stoic-pipeline"
+version = "0.1.0"
+description = "Builds the Stoic Quotes content database from public domain texts."
+readme = "README.md"
+authors = [
+    { name = "dimaderevciuc", email = "146429966+dimaderevciuc@users.noreply.github.com" }
+]
+requires-python = ">=3.13"
+dependencies = []
+
+[project.scripts]
+stoic-pipeline = "stoic_pipeline:main"
+
+[build-system]
+requires = ["uv_build>=0.12.23,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+    "ruff>=0.17.4",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+
+[tool.ruff.lint]
+# E/F: errors, I: import order, B: bugbear, UP: modern syntax, S: security, ANN: type hints.
+select = ["E", "F", "I", "B", "UP", "S", "ANN", "SIM", "RUF"]
+
+[tool.ruff.lint.per-file-ignores]
+# assert is how pytest works.
+"tests/**" = ["S101"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
