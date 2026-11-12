@@ -8,7 +8,7 @@ from stoic_pipeline.situations import combined_ranking, load_situations, validat
 
 def test_library_is_valid() -> None:
     situations = load_situations()
-    assert len(situations) == 151
+    assert len(situations) == 157
     assert validate_situations(situations) == []
     assert all(s.reviewed for s in situations)
 

@@ -1,10 +1,10 @@
-# Situation taxonomy (draft for Checkpoint 3a)
+# Situation taxonomy
 
-151 situations in 17 categories, 25 marked sensitive (extra care: help resources, no pressure to endure).
+157 situations in 17 categories, 25 marked sensitive (extra care: help resources, no pressure to endure). Approved by Dima at Checkpoint 3a; the procrastination group was added at his request.
 
 Not in this list on purpose: suicidal thoughts, self harm and immediate danger. Those never get quotes; the safety layer shows the crisis screen instead.
 
-## work (16)
+## work (17)
 
 | id | Title | Sensitive | Note |
 |---|---|---|---|
@@ -24,6 +24,7 @@ Not in this list on purpose: suicidal thoughts, self harm and immediate danger. 
 | presentation-nerves | Nervous about a presentation or speech |  |  |
 | career-change | Afraid to change careers |  |  |
 | big-risk | Taking a big risk, like starting a business |  |  |
+| procrastination-big-project | A big project feels too big to start |  | added on Dima's request (procrastination focus) |
 
 ## study (7)
 
@@ -162,7 +163,7 @@ Not in this list on purpose: suicidal thoughts, self harm and immediate danger. 
 | lied-guilt | I feel guilty for lying |  |  |
 | want-to-be-better | I want to become a better person |  |  |
 
-## habits (10)
+## habits (15)
 
 | id | Title | Sensitive | Note |
 |---|---|---|---|
@@ -176,6 +177,11 @@ Not in this list on purpose: suicidal thoughts, self harm and immediate danger. 
 | starting-is-hard | Starting is the hardest part |  |  |
 | impulse-buying | I keep buying things I don't need |  |  |
 | cravings | I can't resist cravings |  |  |
+| procrastination-perfectionism | I put it off because it has to be perfect |  | added on Dima's request (procrastination focus) |
+| procrastination-fear | I avoid starting because I'm afraid it will go badly |  | added on Dima's request (procrastination focus) |
+| procrastination-admin | I keep avoiding emails, bills and admin |  | added on Dima's request (procrastination focus) |
+| bedtime-procrastination | I stay up too late to get time for myself |  | added on Dima's request (procrastination focus) |
+| procrastination-guilt | I feel guilty about all the time I wasted |  | added on Dima's request (procrastination focus) |
 
 ## money (5)
 

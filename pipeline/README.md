@@ -30,7 +30,7 @@ uv run ruff check && uv run pytest
 | Meditations | George Long | 1862 | Project Gutenberg #15877 |
 | Discourses, Enchiridion | George Long | 1877 | Wikisource |
 | Moral Letters to Lucilius | Richard M. Gummere | 1917, 1920, 1925 | Wikisource (Loeb) |
-| Of Anger, Consolations to Marcia, Helvia, Polybius (Seneca) | Aubrey Stewart | 1889 | Project Gutenberg #64576 |
+| Of Anger, On the Shortness of Life, Consolations to Marcia, Helvia, Polybius (Seneca) | Aubrey Stewart | 1889 | Project Gutenberg #64576 |
 | As a Man Thinketh (James Allen) | written in English | 1903 | Project Gutenberg #4507 |
 
 Every file is pinned in `data/sources.json` by URL, Wikisource revision id and SHA-256.
@@ -54,7 +54,7 @@ Every file is pinned in `data/sources.json` by URL, Wikisource revision id and S
 - Seneca, Dialogues (Stewart): only Of Anger and the three Consolations. Skipped: passages
   praising death as a release (Marcia 19 to 23, Of Anger 3.15), lines about enduring
   abuse, dated remarks about women, and the flattery of Claudius in To Polybius.
-- Approval: the 45 Stewart quotes (`quotes_seneca_dialogues.jsonl`, added 2026-11-12) were
+- Approval: the 60 Stewart quotes (`quotes_seneca_dialogues.jsonl`, added 2026-11-12) were
   marked reviewed by Claude at Dima's request, not read by a person. Dima will flag any to
   drop while using the app.
 - Rejected entries are kept in `data/curated/rejected.jsonl`.
@@ -75,7 +75,7 @@ Every file is pinned in `data/sources.json` by URL, Wikisource revision id and S
 
 ## Situations (Phase 3)
 
-- `data/situations/taxonomy.jsonl`: 151 situations in 17 categories, approved by Dima.
+- `data/situations/taxonomy.jsonl`: 157 situations in 17 categories, approved by Dima (6 procrastination ones added at his request).
 - `data/situations/situations.jsonl`: per situation 7 example phrases, 3 to 4 hand-picked
   quotes with "how it applies", and a 2 to 4 step exercise. Written and marked reviewed
   by Claude at Dima's request (2026-11-12); Dima will flag changes while using the app.

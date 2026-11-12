@@ -341,6 +341,12 @@ STEWART_PARTS = (
         "THE SEVENTH BOOK OF THE DIALOGUES",
     ),
     (
+        "sen-shortness",
+        "On the Shortness of Life ",
+        "THE TENTH BOOK OF THE DIALOGUES",
+        "THE ELEVENTH BOOK OF THE DIALOGUES",
+    ),
+    (
         "sen-helvia",
         "Consolation to Helvia ",
         "THE ELEVENTH BOOK OF THE DIALOGUES",
@@ -353,7 +359,9 @@ STEWART_PARTS = (
         "\nON CLEMENCY.",
     ),
 )
-_STEWART_BODY_START = re.compile(r"\n(?:Book [IV]+\.|OF CONSOLATION\.)\n")
+_STEWART_BODY_START = re.compile(
+    r"\n(?:Book [IV]+\.|OF CONSOLATION\.|OF THE SHORTNESS OF LIFE\.)\n"
+)
 _FOOTNOTE_BLOCK = re.compile(r"^\[\d+\] ", re.M)  # footnote bodies follow each dialogue
 _PAGE_MARK = re.compile(r"\{\d+\}")  # printed page numbers, e.g. {49}
 _NOTE_MARK = re.compile(r"\[\d+\]")  # footnote references in the text

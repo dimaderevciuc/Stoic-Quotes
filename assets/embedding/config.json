@@ -596,7 +596,22 @@
   "sen-polybius-18-b",
   "sen-polybius-5-a",
   "sen-polybius-1-a",
-  "sen-polybius-8-a"
+  "sen-polybius-8-a",
+  "sen-shortness-1-a",
+  "sen-shortness-2-a",
+  "sen-shortness-3-a",
+  "sen-shortness-3-b",
+  "sen-shortness-7-a",
+  "sen-shortness-7-b",
+  "sen-shortness-7-c",
+  "sen-shortness-8-a",
+  "sen-shortness-8-b",
+  "sen-shortness-9-a",
+  "sen-shortness-9-b",
+  "sen-shortness-9-c",
+  "sen-shortness-9-d",
+  "sen-shortness-10-a",
+  "sen-shortness-16-a"
  ],
  "situation_ids": [
   "rejected-after-interview",
@@ -749,7 +764,13 @@
   "news-overwhelm",
   "world-unfair",
   "feel-powerless",
-  "climate-anxiety"
+  "climate-anxiety",
+  "procrastination-perfectionism",
+  "procrastination-fear",
+  "procrastination-big-project",
+  "procrastination-admin",
+  "bedtime-procrastination",
+  "procrastination-guilt"
  ],
  "situation_threshold": 0.9
 }

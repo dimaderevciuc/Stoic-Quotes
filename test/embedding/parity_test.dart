@@ -59,7 +59,7 @@ void main() {
 
   test('every situation is loaded with content', () {
     expect(data.situations, hasLength(data.situationIndex.ids.length));
-    expect(data.situations.length, 151);
+    expect(data.situations.length, 157);
   });
 
   test('mean pooling and normalization', () {

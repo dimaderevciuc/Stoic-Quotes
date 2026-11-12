@@ -149,3 +149,9 @@
 {"id": "world-unfair", "title": "The world feels unfair", "category": "world", "is_sensitive": false, "note": ""}
 {"id": "feel-powerless", "title": "I feel powerless to change things", "category": "world", "is_sensitive": false, "note": ""}
 {"id": "climate-anxiety", "title": "Worried about climate change", "category": "world", "is_sensitive": false, "note": ""}
+{"id": "procrastination-perfectionism", "title": "I put it off because it has to be perfect", "category": "habits", "is_sensitive": false, "note": "added on Dima's request (procrastination focus)"}
+{"id": "procrastination-fear", "title": "I avoid starting because I'm afraid it will go badly", "category": "habits", "is_sensitive": false, "note": "added on Dima's request (procrastination focus)"}
+{"id": "procrastination-big-project", "title": "A big project feels too big to start", "category": "work", "is_sensitive": false, "note": "added on Dima's request (procrastination focus)"}
+{"id": "procrastination-admin", "title": "I keep avoiding emails, bills and admin", "category": "habits", "is_sensitive": false, "note": "added on Dima's request (procrastination focus)"}
+{"id": "bedtime-procrastination", "title": "I stay up too late to get time for myself", "category": "habits", "is_sensitive": false, "note": "added on Dima's request (procrastination focus)"}
+{"id": "procrastination-guilt", "title": "I feel guilty about all the time I wasted", "category": "habits", "is_sensitive": false, "note": "added on Dima's request (procrastination focus)"}
