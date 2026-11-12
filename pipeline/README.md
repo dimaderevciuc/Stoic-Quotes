@@ -5,6 +5,7 @@ Offline Python pipeline (runs on the developer PC only) that builds the app's co
 ```bash
 uv sync
 uv run stoic-download            # fetch texts into data/raw/ (gitignored), write data/sources.json
+uv run stoic-download --only allen-thinketh   # refresh one source, keep the rest
 uv run stoic-download --verify   # check raw files against the recorded SHA-256
 uv run stoic-split               # data/raw/ -> data/passages/*.jsonl
 uv run stoic-curate passages ma-4-   # print passages to curate from
@@ -23,6 +24,7 @@ uv run ruff check && uv run pytest
 | Meditations | George Long | 1862 | Project Gutenberg #15877 |
 | Discourses, Enchiridion | George Long | 1877 | Wikisource |
 | Moral Letters to Lucilius | Richard M. Gummere | 1917, 1920, 1925 | Wikisource (Loeb) |
+| As a Man Thinketh (James Allen) | written in English | 1903 | Project Gutenberg #4507 |
 
 Every file is pinned in `data/sources.json` by URL, Wikisource revision id and SHA-256.
 
@@ -39,4 +41,7 @@ Every file is pinned in `data/sources.json` by URL, Wikisource revision id and S
   Epicurus), passages that could read as encouraging suicide, and passages that ask
   the reader to accept abuse (for example Enchiridion 30).
 - Fragments of Epictetus are not used: many are of doubtful authenticity.
+- As a Man Thinketh: not Stoic, added on request. Passages claiming that illness,
+  poverty or oppression are caused by the sufferer's own thoughts (chapters 2, 3, 5)
+  are not used, nor the verses and long passages Allen quotes from others.
 - Rejected entries are kept in `data/curated/rejected.jsonl`.

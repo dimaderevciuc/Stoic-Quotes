@@ -28,7 +28,8 @@ REJECTED = CURATED / "rejected.jsonl"
 
 def _show(quote: Quote, position: str) -> None:
     clear_screen()
-    typer.secho(f"{position}  {quote.id}  ({quote.citation}, tr. {quote.translator})", bold=True)
+    translator = f", tr. {quote.translator}" if quote.translator else ""
+    typer.secho(f"{position}  {quote.id}  ({quote.citation}{translator})", bold=True)
     typer.echo(f"\n  \u201c{quote.text}\u201d\n")
     typer.secho(f"  Explanation: {quote.explanation}", fg="cyan")
     typer.echo(f"  Themes: {', '.join(quote.themes)}   Needs: {', '.join(quote.needs)}")

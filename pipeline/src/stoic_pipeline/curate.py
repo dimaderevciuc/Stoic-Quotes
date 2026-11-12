@@ -61,6 +61,7 @@ CURATED_FILES = {
     "Discourses": "quotes_discourses.jsonl",
     "Enchiridion": "quotes_enchiridion.jsonl",
     "Moral Letters to Lucilius": "quotes_seneca.jsonl",
+    "As a Man Thinketh": "quotes_allen.jsonl",
 }
 
 

@@ -270,6 +270,48 @@ def split_seneca_letter(path: Path, source: Source) -> Iterator[Passage]:
         raise ValueError(f"Letter {letter}: no numbered sections found")
 
 
+# --- As a Man Thinketh (Project Gutenberg plain text) ---------------------------------------
+
+ALLEN_CHAPTERS = (
+    "THOUGHT AND CHARACTER",
+    "EFFECT OF THOUGHT ON CIRCUMSTANCES",
+    "EFFECT OF THOUGHT ON HEALTH AND THE BODY",
+    "THOUGHT AND PURPOSE",
+    "THE THOUGHT-FACTOR IN ACHIEVEMENT",
+    "VISIONS AND IDEALS",
+    "SERENITY",
+)
+_ITALIC_MARK = re.compile(r"_(.+?)_", re.S)  # Gutenberg marks italics as _word_
+
+
+def split_allen(raw: str, source: Source) -> Iterator[Passage]:
+    """One passage per paragraph, cited by chapter (the book has no section numbers)."""
+    text = strip_gutenberg_boilerplate(raw).replace("\r\n", "\n")
+    # The body starts at the first chapter heading after the foreword.
+    body = text[text.index("\nTHOUGHT AND CHARACTER\n", text.index("FOREWORD")) :]
+    chapter, paragraph = 0, 0
+    for block in re.split(r"\n\s*\n", body):
+        stripped = block.strip()
+        if not stripped:
+            continue
+        if stripped in ALLEN_CHAPTERS:
+            chapter, paragraph = ALLEN_CHAPTERS.index(stripped) + 1, 0
+            continue
+        paragraph += 1
+        yield Passage(
+            id=f"ja-{chapter}-p{paragraph}",
+            source_id=source.id,
+            author=source.author,
+            work=source.work,
+            citation=f"As a Man Thinketh, {ALLEN_CHAPTERS[chapter - 1].title()}",
+            translator=source.translator,
+            year=source.year,
+            text=clean(_ITALIC_MARK.sub(r"\1", stripped)),
+        )
+    if chapter != len(ALLEN_CHAPTERS):
+        raise ValueError(f"As a Man Thinketh: found {chapter} chapters")
+
+
 # --- Driver ---------------------------------------------------------------------------------
 
 
@@ -283,6 +325,8 @@ def split_source(source: Source) -> list[Passage]:
             passages.extend(split_encheiridion(path, source))
         elif source.id == "epictetus-long":
             passages.extend(split_discourse_chapter(path, source))
+        elif source.id == "allen-thinketh":
+            passages.extend(split_allen(path.read_text(encoding="utf-8"), source))
         elif source.id == "seneca-gummere":
             passages.extend(split_seneca_letter(path, source))
         else:

@@ -11,4 +11,4 @@ def test_curated_corpus_is_valid() -> None:
 
 def test_every_author_is_represented() -> None:
     authors = {q.author for q in load_quotes()}
-    assert authors == {"Marcus Aurelius", "Seneca", "Epictetus"}
+    assert authors == {"Marcus Aurelius", "Seneca", "Epictetus", "James Allen"}

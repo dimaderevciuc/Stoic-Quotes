@@ -68,6 +68,18 @@ MEDITATIONS = GutenbergSpec(
 )
 
 
+AS_A_MAN_THINKETH = GutenbergSpec(
+    source_id="allen-thinketh",
+    ebook_id=4507,
+    author="James Allen",
+    work="As a Man Thinketh",
+    title="As a Man Thinketh",
+    translator="",  # written in English
+    year=1903,
+    year_note="First published 1903. Allen died in 1912, public domain worldwide.",
+)
+
+
 def _epictetus_pages() -> list[str]:
     chapters_per_book = {1: 30, 2: 26, 3: 26, 4: 13}
     pages = [
@@ -210,28 +222,49 @@ def verify_checksums(sources: list[Source]) -> list[str]:
     return problems
 
 
-app = typer.Typer(help="Download public domain Stoic texts.")
+app = typer.Typer(help="Download the public domain source texts.")
+
+
+SOURCE_IDS = ("meditations-long", "epictetus-long", "seneca-gummere", "allen-thinketh")
+
+
+def _download(client: httpx.Client, source_id: str) -> Source:
+    if source_id == MEDITATIONS.source_id:
+        return download_gutenberg(client, MEDITATIONS)
+    if source_id == AS_A_MAN_THINKETH.source_id:
+        return download_gutenberg(client, AS_A_MAN_THINKETH)
+    if source_id == EPICTETUS.source_id:
+        return download_wikisource(client, EPICTETUS)
+    if source_id == SENECA.source_id:
+        return download_wikisource(client, SENECA)
+    raise typer.BadParameter(f"unknown source {source_id!r}, choose from {SOURCE_IDS}")
 
 
 @app.command()
-def main(verify: bool = typer.Option(False, help="Only verify existing files.")) -> None:
+def main(
+    verify: bool = typer.Option(False, help="Only verify existing files."),
+    only: list[str] = typer.Option(  # noqa: B008
+        [], help="Download only these source ids, keep the others in sources.json."
+    ),
+) -> None:
     if verify:
         problems = verify_checksums(load_sources())
         for problem in problems:
             typer.echo(problem)
         raise typer.Exit(code=1 if problems else 0)
 
+    wanted = only or list(SOURCE_IDS)
+    # Keep provenance of sources that are not re-downloaded (Wikisource takes ~20 minutes).
+    existing = {s.id: s for s in load_sources()} if SOURCES_JSON.exists() else {}
     headers = {"User-Agent": USER_AGENT}
     with httpx.Client(headers=headers, timeout=TIMEOUT, follow_redirects=True) as client:
-        sources = [
-            download_gutenberg(client, MEDITATIONS),
-            download_wikisource(client, EPICTETUS),
-            download_wikisource(client, SENECA),
-        ]
+        for source_id in wanted:
+            existing[source_id] = _download(client, source_id)
+    sources = [existing[i] for i in SOURCE_IDS if i in existing]
     SOURCES_JSON.parent.mkdir(parents=True, exist_ok=True)
     SOURCES_JSON.write_text(
         json.dumps([s.model_dump() for s in sources], indent=2, ensure_ascii=False) + "\n",
         encoding="utf-8",
     )
-    total = sum(len(s.files) for s in sources)
+    total = sum(len(existing[i].files) for i in wanted)
     typer.echo(f"Downloaded {total} files, provenance written to {SOURCES_JSON}")

@@ -189,3 +189,23 @@ def test_seneca_sections_outside_paragraphs(tmp_path: Path) -> None:
     texts = [p.text for p in split_seneca_letter(path, src)]
 
     assert texts == ["Outside a paragraph.", "Inside one."]
+
+
+def test_allen_chapters_and_italics() -> None:
+    from stoic_pipeline.split import ALLEN_CHAPTERS, split_allen
+
+    chapters = "\n\n".join(f"{title}\n\nText of {title.lower()}." for title in ALLEN_CHAPTERS)
+    raw = (
+        "*** START OF THE PROJECT GUTENBERG EBOOK AS A MAN THINKETH ***\n"
+        "CONTENTS\n\nTHOUGHT AND CHARACTER\n\nFOREWORD\n\nForeword text.\n\n"
+        f"{chapters.replace('Text of thought and character.', 'A man is _what he thinks_.')}\n\n"
+        "*** END OF THE PROJECT GUTENBERG EBOOK AS A MAN THINKETH ***"
+    )
+    src = source("allen-thinketh", "James Allen", "As a Man Thinketh", 1903)
+
+    passages = list(split_allen(raw, src))
+
+    assert len(passages) == len(ALLEN_CHAPTERS)
+    assert passages[0].text == "A man is what he thinks."
+    assert passages[0].citation == "As a Man Thinketh, Thought And Character"
+    assert passages[-1].id == "ja-7-p1"

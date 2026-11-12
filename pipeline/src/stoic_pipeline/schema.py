@@ -13,7 +13,8 @@ from pydantic import BaseModel, ConfigDict, Field, field_validator, model_valida
 
 from stoic_pipeline.text import clean
 
-Author = Literal["Marcus Aurelius", "Seneca", "Epictetus"]
+# James Allen is not a Stoic, but As a Man Thinketh (1903) was added at Dima's request.
+Author = Literal["Marcus Aurelius", "Seneca", "Epictetus", "James Allen"]
 
 # Controlled vocabularies keep tags consistent, so matching and filtering stay reliable.
 THEMES: frozenset[str] = frozenset(
@@ -71,7 +72,7 @@ NEEDS: frozenset[str] = frozenset(
     }
 )
 
-QUOTE_ID_PATTERN = re.compile(r"^(ma|sen|epi)-[a-z0-9]+(-[a-z0-9]+)*-[a-z]$")
+QUOTE_ID_PATTERN = re.compile(r"^(ma|sen|epi|ja)-[a-z0-9]+(-[a-z0-9]+)*-[a-z]$")
 MIN_QUOTE_CHARS = 40
 MAX_QUOTE_CHARS = 400
 
@@ -94,7 +95,7 @@ class Source(StrictModel):
     author: Author
     work: str
     title: str  # title of the edition as published
-    translator: str
+    translator: str  # empty for works written in English
     year: int
     year_note: str = ""
     files: list[SourceFile]
@@ -132,7 +133,8 @@ class Quote(StrictModel):
     @classmethod
     def _id_format(cls, value: str) -> str:
         if not QUOTE_ID_PATTERN.match(value):
-            raise ValueError(f"id {value!r} must look like ma-4-3-a, sen-13-4-a, epi-ench-1-a")
+            examples = "ma-4-3-a, sen-13-4-a, epi-ench-1-a, ja-2-a"
+            raise ValueError(f"id {value!r} must look like {examples}")
         return value
 
     @field_validator("text")

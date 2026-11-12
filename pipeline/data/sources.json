@@ -1357,5 +1357,22 @@
         "sha256": "1931d0f7930086bff92ab0bd6e6418860c73d646ec289ea32a5369a4b359b329"
       }
     ]
+  },
+  {
+    "id": "allen-thinketh",
+    "author": "James Allen",
+    "work": "As a Man Thinketh",
+    "title": "As a Man Thinketh",
+    "translator": "",
+    "year": 1903,
+    "year_note": "First published 1903. Allen died in 1912, public domain worldwide.",
+    "files": [
+      {
+        "path": "allen-thinketh/pg4507.txt",
+        "url": "https://www.gutenberg.org/cache/epub/4507/pg4507.txt",
+        "revision": null,
+        "sha256": "5c189ac57a410e844895e9e054630cab10138d145952a72ccc200702076e2aa9"
+      }
+    ]
   }
 ]
