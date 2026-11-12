@@ -25,7 +25,7 @@ void main() {
     final times = <int>[];
     for (final c in cases) {
       final watch = Stopwatch()..start();
-      final hits = await search.search(c.text);
+      final hits = await search.searchQuotes(c.text);
       times.add(watch.elapsedMicroseconds);
       final ids = [for (final h in hits) h.id];
       if (_listEquals(ids, c.top5Ids)) sameTop5++;

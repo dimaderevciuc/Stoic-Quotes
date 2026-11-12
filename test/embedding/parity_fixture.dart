@@ -9,13 +9,16 @@ import 'package:stoic_quotes/core/embedding/semantic_search.dart';
 EmbeddingAssets loadAssetsFromDisk() {
   String text(String name) =>
       File('${EmbeddingAssets.dir}/$name').readAsStringSync();
+  ByteData bytes(String name) => ByteData.sublistView(
+    File('${EmbeddingAssets.dir}/$name').readAsBytesSync(),
+  );
   return EmbeddingAssets(
     config: text('config.json'),
     vocab: text('vocab.txt'),
     chars: text('chars.json'),
-    quotes: ByteData.sublistView(
-      File('${EmbeddingAssets.dir}/quotes.bin').readAsBytesSync(),
-    ),
+    quotes: bytes('quotes.bin'),
+    situationVectors: bytes('situations.bin'),
+    situations: text('situations.json'),
   );
 }
 
@@ -31,6 +34,10 @@ class ParityCase {
         for (final e in json['top5'] as List<dynamic>)
           ((e as Map<String, dynamic>)['score'] as num).toDouble(),
       ],
+      top3Situations = [
+        for (final e in json['top3_situations'] as List<dynamic>)
+          (e as Map<String, dynamic>)['id'] as String,
+      ],
       query = Float32List.fromList([
         for (final v in json['query'] as List<dynamic>) (v as num).toDouble(),
       ]);
@@ -39,6 +46,7 @@ class ParityCase {
   final List<int> tokenIds;
   final List<String> top5Ids;
   final List<double> top5Scores;
+  final List<String> top3Situations;
   final Float32List query;
 
   String get label => text.length > 40 ? '${text.substring(0, 40)}...' : text;

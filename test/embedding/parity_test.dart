@@ -29,6 +29,39 @@ void main() {
     });
   }
 
+  for (final (i, c) in cases.indexed) {
+    test('situations match Python, case $i: ${c.label}', () {
+      final hits = data.situationIndex.search(c.query, k: 3);
+      expect([for (final h in hits) h.id], c.top3Situations);
+    });
+  }
+
+  test('combined ranking puts the situation quotes first', () {
+    final c = cases.first; // a job rejection: should match a situation
+    final result = data.rank(c.query);
+    expect(result.situation, isNotNull);
+    expect(result.situation!.id, c.top3Situations.first);
+    final picked = result.situation!.quoteIds;
+    expect([
+      for (final h in result.quotes.take(picked.length)) h.id,
+    ], picked.take(result.quotes.length).toList());
+  });
+
+  test('off topic text falls back to plain quotes', () {
+    final c = cases.firstWhere((c) => c.text.startsWith('12345'));
+    final result = data.rank(c.query);
+    expect(result.situation, isNull);
+    expect(
+      [for (final h in result.quotes) h.id],
+      [for (final h in data.index.search(c.query)) h.id],
+    );
+  });
+
+  test('every situation is loaded with content', () {
+    expect(data.situations, hasLength(data.situationIndex.ids.length));
+    expect(data.situations.length, 151);
+  });
+
   test('mean pooling and normalization', () {
     // Two tokens of dim 2: mean (2, 1) -> unit vector (2, 1) / sqrt(5).
     final v = meanPoolNormalize([1, 0, 3, 2], 2, 2);

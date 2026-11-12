@@ -18,6 +18,8 @@ Future<SemanticSearch> loadSemanticSearch([AssetBundle? bundle]) async {
     vocab: await b.loadString('$dir/vocab.txt'),
     chars: await b.loadString('$dir/chars.json'),
     quotes: await b.load('$dir/quotes.bin'),
+    situationVectors: await b.load('$dir/situations.bin'),
+    situations: await b.loadString('$dir/situations.json'),
   );
   final data = await Isolate.run(() => EmbeddingData.parse(assets));
   final embedder = await OnnxEmbedder.fromAsset(

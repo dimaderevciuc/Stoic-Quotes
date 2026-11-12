@@ -1,4 +1,4 @@
-/// Brute force cosine search over the precomputed quote vectors.
+/// Brute force cosine search over precomputed vectors (quotes or situations).
 ///
 /// A few hundred quotes times a few hundred dimensions is well under a
 /// millisecond, so no approximate index is needed.
@@ -30,7 +30,8 @@ class QuoteIndex {
   final List<String> ids;
   final Int8Matrix vectors;
 
-  List<QuoteHit> search(Float32List query, {int k = 5}) {
+  /// Cosine similarity of [query] with every row, in index order.
+  Float64List scoreAll(Float32List query) {
     if (query.length != vectors.dim) {
       throw ArgumentError(
         'query has ${query.length} dims, index has ${vectors.dim}',
@@ -46,6 +47,12 @@ class QuoteIndex {
       }
       scores[i] = dot * vectors.scales[i];
     }
+    return scores;
+  }
+
+  /// All rows, best first.
+  List<QuoteHit> search(Float32List query, {int k = 5}) {
+    final scores = scoreAll(query);
     // Ties keep index order, like numpy's stable argsort in the pipeline.
     final order = List<int>.generate(vectors.rows, (i) => i)
       ..sort((a, b) {
