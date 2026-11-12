@@ -17,6 +17,7 @@ uv run stoic-legacy              # trace the old CSV quotes (legacy_report.md)
 uv run stoic-embed eval          # compare models on golden/eval_situations.jsonl (eval_report.md)
 uv run stoic-embed export        # model + quote vectors -> ../assets/embedding/ (int8)
 uv run stoic-embed parity        # golden/parity.json, checked by the Dart tests
+uv run stoic-embed fetch         # download the pinned model into ../assets (not in git)
 uv run ruff check && uv run pytest
 ```
 
@@ -51,9 +52,14 @@ Every file is pinned in `data/sources.json` by URL, Wikisource revision id and S
 
 ## Embeddings (Phase 2)
 
-- Model: `minishlab/potion-base-8M` (Model2Vec, MIT). Same tokenizer family as the
-  other candidates, so swapping models is a re-export, no Dart change.
+- Model: `thenlper/gte-small` as the int8 ONNX file from `Xenova/gte-small` (MIT),
+  pinned by revision and SHA-256. The app runs the same file with ONNX Runtime
+  (flutter_onnxruntime) and tokenizes in Dart. Model2Vec static embeddings were
+  tried first and replaced: recall@5 0.27 against 0.40 (see `data/golden/eval_report.md`).
 - A quote is embedded as the weighted mean of its explanation (2), quote text (1) and
   theme/need words (1). The plain explanation matches how people describe problems.
-- Rerun `export` and `parity` after any change to the curated quotes, then
-  `flutter test` in the repo root.
+- Sentences are encoded one at a time, never padded into a batch: the int8 model
+  quantizes activations per call, so padding would change the numbers.
+- The model file is not in git: after cloning run `uv run stoic-embed fetch`.
+- After any change to the curated quotes: `export`, then `parity`, then in the repo
+  root `flutter test` and `flutter test integration_test -d linux`.

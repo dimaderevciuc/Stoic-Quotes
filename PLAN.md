@@ -162,6 +162,11 @@ class Quote(BaseModel):
 
 ## 6. Phase 2: On-device embeddings (Model2Vec, pure Dart)
 
+> Update (Dima's decision after Checkpoint 2): Model2Vec was built and measured, then
+> replaced by `gte-small` (int8 ONNX, MIT) run with ONNX Runtime, because recall@5 rose
+> from 0.27 to 0.40. App size budget raised to 60 to 70 MB. The Dart tokenizer and the
+> parity tests below still apply; the model runs through flutter_onnxruntime.
+
 ### Technology
 - **Model2Vec** static embeddings, model `minishlab/potion-base-8M` (MIT license). Each token has a fixed vector, a sentence vector is the mean of its token vectors, then L2 normalized. No neural network runs on the phone, so no native runtime is needed.
 - Check the model card and the `model2vec` library source for the exact inference steps (tokenizer type, normalization, pooling, any weighting) and replicate them exactly.
