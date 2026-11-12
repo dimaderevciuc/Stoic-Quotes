@@ -1,0 +1,77 @@
+# Crisis keyword phrases (English). One per line, matched as whole words on
+# normalized text: lowercase, curly quotes straightened, anything that is not a
+# letter, digit or apostrophe turned into a space. Prefer false positives.
+# Dima reviews this list.
+
+# Suicide and wanting to die
+suicide
+suicidal
+kill myself
+killing myself
+end my life
+ending my life
+end it all
+take my own life
+taking my own life
+want to die
+wanna die
+want to be dead
+wish i was dead
+wish i were dead
+better off dead
+better off without me
+no reason to live
+nothing to live for
+don't want to live
+dont want to live
+don't want to be alive
+dont want to be alive
+can't go on living
+cant go on living
+not worth living
+don't want to wake up
+dont want to wake up
+never wake up
+goodbye letter
+suicide note
+kms
+unalive
+
+# Self harm
+hurt myself
+hurting myself
+harm myself
+harming myself
+self harm
+selfharm
+cut myself
+cutting myself
+burn myself
+overdose
+take all my pills
+take all the pills
+hang myself
+jump off a bridge
+jump off the roof
+
+# Immediate danger
+going to kill me
+gonna kill me
+threatening to kill me
+threatened to kill me
+he is hitting me
+she is hitting me
+he's hitting me
+she's hitting me
+hitting me right now
+i'm not safe
+im not safe
+i am not safe
+not safe at home
+in danger right now
+someone is hurting me
+he has a knife
+she has a knife
+he has a gun
+raped
+sexually assaulted

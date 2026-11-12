@@ -1,0 +1,227 @@
+[
+ {
+  "text": "I really want to die",
+  "normalized": " i really want to die ",
+  "keyword": "want to die"
+ },
+ {
+  "text": "I'm going to kill myself",
+  "normalized": " i'm going to kill myself ",
+  "keyword": "kill myself"
+ },
+ {
+  "text": "sometimes I think about ending it all",
+  "normalized": " sometimes i think about ending it all ",
+  "keyword": null
+ },
+ {
+  "text": "I don't want to be here anymore",
+  "normalized": " i don't want to be here anymore ",
+  "keyword": null
+ },
+ {
+  "text": "what's the point of living",
+  "normalized": " what's the point of living ",
+  "keyword": null
+ },
+ {
+  "text": "I just want everything to end",
+  "normalized": " i just want everything to end ",
+  "keyword": null
+ },
+ {
+  "text": "I feel like cutting again",
+  "normalized": " i feel like cutting again ",
+  "keyword": null
+ },
+ {
+  "text": "I've been self harming",
+  "normalized": " i've been self harming ",
+  "keyword": null
+ },
+ {
+  "text": "thinking of taking an overdose",
+  "normalized": " thinking of taking an overdose ",
+  "keyword": "overdose"
+ },
+ {
+  "text": "my family would be better off without me",
+  "normalized": " my family would be better off without me ",
+  "keyword": "better off without me"
+ },
+ {
+  "text": "I can't go on like this, I want to die",
+  "normalized": " i can't go on like this i want to die ",
+  "keyword": "want to die"
+ },
+ {
+  "text": "I'm planning my suicide",
+  "normalized": " i'm planning my suicide ",
+  "keyword": "suicide"
+ },
+ {
+  "text": "I wish I could fall asleep and not wake up",
+  "normalized": " i wish i could fall asleep and not wake up ",
+  "keyword": null
+ },
+ {
+  "text": "nobody would care if I disappeared for good",
+  "normalized": " nobody would care if i disappeared for good ",
+  "keyword": null
+ },
+ {
+  "text": "I want to stop existing",
+  "normalized": " i want to stop existing ",
+  "keyword": null
+ },
+ {
+  "text": "he's beating me and I can't get away",
+  "normalized": " he's beating me and i can't get away ",
+  "keyword": null
+ },
+ {
+  "text": "my boyfriend has a gun and is threatening me",
+  "normalized": " my boyfriend has a gun and is threatening me ",
+  "keyword": null
+ },
+ {
+  "text": "I'm afraid my dad will kill me tonight",
+  "normalized": " i'm afraid my dad will kill me tonight ",
+  "keyword": null
+ },
+ {
+  "text": "I'm not safe right now",
+  "normalized": " i'm not safe right now ",
+  "keyword": "i'm not safe"
+ },
+ {
+  "text": "I swallowed a bottle of pills",
+  "normalized": " i swallowed a bottle of pills ",
+  "keyword": null
+ },
+ {
+  "text": "this homework is killing me",
+  "normalized": " this homework is killing me ",
+  "keyword": null
+ },
+ {
+  "text": "I'm dying to see the new movie",
+  "normalized": " i'm dying to see the new movie ",
+  "keyword": null
+ },
+ {
+  "text": "I killed it at my presentation today",
+  "normalized": " i killed it at my presentation today ",
+  "keyword": null
+ },
+ {
+  "text": "my grandmother died last week",
+  "normalized": " my grandmother died last week ",
+  "keyword": null
+ },
+ {
+  "text": "I'm afraid of dying",
+  "normalized": " i'm afraid of dying ",
+  "keyword": null
+ },
+ {
+  "text": "I'm so tired of work",
+  "normalized": " i'm so tired of work ",
+  "keyword": null
+ },
+ {
+  "text": "I hate my job",
+  "normalized": " i hate my job ",
+  "keyword": null
+ },
+ {
+  "text": "my boss yelled at me",
+  "normalized": " my boss yelled at me ",
+  "keyword": null
+ },
+ {
+  "text": "I feel lonely",
+  "normalized": " i feel lonely ",
+  "keyword": null
+ },
+ {
+  "text": "I'm stressed about exams",
+  "normalized": " i'm stressed about exams ",
+  "keyword": null
+ },
+ {
+  "text": "I feel like a failure",
+  "normalized": " i feel like a failure ",
+  "keyword": null
+ },
+ {
+  "text": "I can't sleep at night",
+  "normalized": " i can't sleep at night ",
+  "keyword": null
+ },
+ {
+  "text": "my cat died",
+  "normalized": " my cat died ",
+  "keyword": null
+ },
+ {
+  "text": "I'm angry at my brother",
+  "normalized": " i'm angry at my brother ",
+  "keyword": null
+ },
+ {
+  "text": "I lost my job",
+  "normalized": " i lost my job ",
+  "keyword": null
+ },
+ {
+  "text": "nothing goes right for me",
+  "normalized": " nothing goes right for me ",
+  "keyword": null
+ },
+ {
+  "text": "I want to quit smoking",
+  "normalized": " i want to quit smoking ",
+  "keyword": null
+ },
+ {
+  "text": "I feel worthless",
+  "normalized": " i feel worthless ",
+  "keyword": null
+ },
+ {
+  "text": "I'm overwhelmed with everything",
+  "normalized": " i'm overwhelmed with everything ",
+  "keyword": null
+ },
+ {
+  "text": "the news makes me anxious",
+  "normalized": " the news makes me anxious ",
+  "keyword": null
+ },
+ {
+  "text": "I'm getting old",
+  "normalized": " i'm getting old ",
+  "keyword": null
+ },
+ {
+  "text": "I keep procrastinating",
+  "normalized": " i keep procrastinating ",
+  "keyword": null
+ },
+ {
+  "text": "my partner cheated on me",
+  "normalized": " my partner cheated on me ",
+  "keyword": null
+ },
+ {
+  "text": "I feel stuck in life",
+  "normalized": " i feel stuck in life ",
+  "keyword": null
+ },
+ {
+  "text": "I had a panic attack yesterday",
+  "normalized": " i had a panic attack yesterday ",
+  "keyword": null
+ }
+]

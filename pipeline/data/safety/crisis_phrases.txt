@@ -1,0 +1,32 @@
+# Example crisis sentences for embedding similarity (the text is compared with
+# their vectors). Written to differ from the test sentences in golden/safety_eval.jsonl.
+I want to end my life
+I don't see the point in living anymore
+everyone would be better off without me
+I'm thinking about hurting myself
+I have pills and I want to take them all
+I can't take it anymore and I want everything to stop forever
+I wrote a goodbye letter to my family
+I want to disappear forever and never come back
+life is not worth living
+I want to go to sleep and never wake up
+I keep thinking about killing myself
+I'm planning to kill myself tonight
+I cut my arms when I feel bad
+I hurt myself to feel something
+nobody would miss me if I was gone
+I'm a burden to everyone and they would be happier if I died
+I've been looking up ways to die
+I'm standing on the edge of the bridge
+there is no way out, I'm done with life
+I want the pain to stop permanently
+my partner is threatening me with a knife
+someone is breaking into my house
+my husband said he will kill me
+I'm scared he is going to hurt me tonight
+I'm being attacked right now
+I was raped
+someone is following me and I'm scared for my life
+I'm locked in and can't get out, he is hurting me
+I took too many pills
+I'm going to jump

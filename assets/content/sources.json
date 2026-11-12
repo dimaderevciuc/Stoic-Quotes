@@ -1,0 +1,42 @@
+[
+ {
+  "author": "Marcus Aurelius",
+  "work": "Meditations",
+  "title": "Thoughts of the Emperor Marcus Aurelius Antoninus",
+  "translator": "George Long",
+  "year": 1862,
+  "origin": "Project Gutenberg #15877"
+ },
+ {
+  "author": "Epictetus",
+  "work": "Discourses and Encheiridion",
+  "title": "The Discourses of Epictetus; with the Encheiridion and Fragments",
+  "translator": "George Long",
+  "year": 1877,
+  "origin": "Wikisource"
+ },
+ {
+  "author": "Seneca",
+  "work": "Moral Letters to Lucilius",
+  "title": "Ad Lucilium epistulae morales (Loeb Classical Library)",
+  "translator": "Richard M. Gummere",
+  "year": 1917,
+  "origin": "Wikisource"
+ },
+ {
+  "author": "Seneca",
+  "work": "Dialogues",
+  "title": "Minor Dialogues, Together with the Dialogue on Clemency",
+  "translator": "Aubrey Stewart",
+  "year": 1889,
+  "origin": "Project Gutenberg #64576"
+ },
+ {
+  "author": "James Allen",
+  "work": "As a Man Thinketh",
+  "title": "As a Man Thinketh",
+  "translator": "",
+  "year": 1903,
+  "origin": "Project Gutenberg #4507"
+ }
+]
