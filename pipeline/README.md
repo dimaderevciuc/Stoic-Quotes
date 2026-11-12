@@ -14,6 +14,9 @@ uv run stoic-curate validate     # every rule, exit 1 on any problem
 uv run stoic-curate stats        # counts and random samples
 uv run stoic-review              # approve / edit / reject, one entry at a time
 uv run stoic-legacy              # trace the old CSV quotes (legacy_report.md)
+uv run stoic-embed eval          # compare models on golden/eval_situations.jsonl (eval_report.md)
+uv run stoic-embed export        # model + quote vectors -> ../assets/embedding/ (int8)
+uv run stoic-embed parity        # golden/parity.json, checked by the Dart tests
 uv run ruff check && uv run pytest
 ```
 
@@ -45,3 +48,12 @@ Every file is pinned in `data/sources.json` by URL, Wikisource revision id and S
   poverty or oppression are caused by the sufferer's own thoughts (chapters 2, 3, 5)
   are not used, nor the verses and long passages Allen quotes from others.
 - Rejected entries are kept in `data/curated/rejected.jsonl`.
+
+## Embeddings (Phase 2)
+
+- Model: `minishlab/potion-base-8M` (Model2Vec, MIT). Same tokenizer family as the
+  other candidates, so swapping models is a re-export, no Dart change.
+- A quote is embedded as the weighted mean of its explanation (2), quote text (1) and
+  theme/need words (1). The plain explanation matches how people describe problems.
+- Rerun `export` and `parity` after any change to the curated quotes, then
+  `flutter test` in the repo root.
