@@ -1,0 +1,151 @@
+{"id": "rejected-after-interview", "title": "Rejected after a job interview", "category": "work", "is_sensitive": false, "note": ""}
+{"id": "lost-job", "title": "I lost my job", "category": "work", "is_sensitive": false, "note": ""}
+{"id": "long-job-search", "title": "A long job search and losing hope", "category": "work", "is_sensitive": false, "note": ""}
+{"id": "criticized-by-boss", "title": "Criticized by my boss", "category": "work", "is_sensitive": false, "note": ""}
+{"id": "difficult-coworker", "title": "A rude or difficult coworker", "category": "work", "is_sensitive": false, "note": ""}
+{"id": "credit-taken", "title": "Someone took credit for my work", "category": "work", "is_sensitive": false, "note": ""}
+{"id": "passed-over", "title": "Passed over for a promotion", "category": "work", "is_sensitive": false, "note": ""}
+{"id": "overwhelmed-workload", "title": "Too much work, I'm overwhelmed", "category": "work", "is_sensitive": false, "note": ""}
+{"id": "burnout", "title": "Burnt out and exhausted", "category": "work", "is_sensitive": false, "note": "also points to rest and, if it lasts, a doctor"}
+{"id": "mistake-at-work", "title": "I made a mistake at work", "category": "work", "is_sensitive": false, "note": ""}
+{"id": "stuck-in-job", "title": "Stuck in a job I don't like", "category": "work", "is_sensitive": false, "note": ""}
+{"id": "work-feels-pointless", "title": "My work feels pointless", "category": "work", "is_sensitive": false, "note": ""}
+{"id": "imposter-feeling", "title": "I feel like a fraud at work", "category": "work", "is_sensitive": false, "note": ""}
+{"id": "presentation-nerves", "title": "Nervous about a presentation or speech", "category": "work", "is_sensitive": false, "note": ""}
+{"id": "career-change", "title": "Afraid to change careers", "category": "work", "is_sensitive": false, "note": ""}
+{"id": "big-risk", "title": "Taking a big risk, like starting a business", "category": "work", "is_sensitive": false, "note": ""}
+{"id": "exam-stress", "title": "Stressed about exams", "category": "study", "is_sensitive": false, "note": ""}
+{"id": "failed-exam", "title": "I failed an exam", "category": "study", "is_sensitive": false, "note": ""}
+{"id": "procrastination", "title": "I keep procrastinating", "category": "study", "is_sensitive": false, "note": ""}
+{"id": "cant-focus", "title": "I can't focus", "category": "study", "is_sensitive": false, "note": ""}
+{"id": "what-to-study", "title": "Not sure what to study or do next", "category": "study", "is_sensitive": false, "note": ""}
+{"id": "slow-progress", "title": "Frustrated by slow progress learning something", "category": "study", "is_sensitive": false, "note": ""}
+{"id": "parents-expectations", "title": "Pressure from my parents' expectations", "category": "study", "is_sensitive": false, "note": ""}
+{"id": "breakup", "title": "My partner broke up with me", "category": "relationships", "is_sensitive": false, "note": ""}
+{"id": "missing-ex", "title": "I can't stop thinking about my ex", "category": "relationships", "is_sensitive": false, "note": ""}
+{"id": "cheated-on", "title": "My partner cheated on me", "category": "relationships", "is_sensitive": true, "note": ""}
+{"id": "jealous-partner", "title": "Jealousy in my relationship", "category": "relationships", "is_sensitive": false, "note": ""}
+{"id": "keep-arguing", "title": "We keep arguing", "category": "relationships", "is_sensitive": false, "note": ""}
+{"id": "unequal-effort", "title": "I give more than I get in my relationship", "category": "relationships", "is_sensitive": false, "note": ""}
+{"id": "rejected-by-crush", "title": "Rejected by someone I like", "category": "relationships", "is_sensitive": false, "note": ""}
+{"id": "single-lonely", "title": "I want a partner and I'm still single", "category": "relationships", "is_sensitive": false, "note": ""}
+{"id": "divorce", "title": "Going through a divorce", "category": "relationships", "is_sensitive": true, "note": ""}
+{"id": "long-distance", "title": "A long distance relationship", "category": "relationships", "is_sensitive": false, "note": ""}
+{"id": "afraid-to-trust-again", "title": "Afraid to trust someone again", "category": "relationships", "is_sensitive": false, "note": ""}
+{"id": "controlling-partner", "title": "My partner controls, threatens or hurts me", "category": "relationships", "is_sensitive": true, "note": "abuse: content is about safety and getting help, never about enduring it"}
+{"id": "conflict-with-parents", "title": "Conflict with my parents", "category": "family", "is_sensitive": false, "note": ""}
+{"id": "cant-forgive-parent", "title": "I can't forgive my parent", "category": "family", "is_sensitive": true, "note": "forgiveness is optional; boundaries are fine"}
+{"id": "difficult-sibling", "title": "A difficult brother or sister", "category": "family", "is_sensitive": false, "note": ""}
+{"id": "family-gatherings", "title": "Tension at family gatherings", "category": "family", "is_sensitive": false, "note": ""}
+{"id": "estranged-family", "title": "Cut off from my family", "category": "family", "is_sensitive": true, "note": ""}
+{"id": "losing-patience-kids", "title": "Losing patience with my kids", "category": "family", "is_sensitive": false, "note": ""}
+{"id": "new-parent", "title": "Overwhelmed as a new parent", "category": "family", "is_sensitive": false, "note": "also points to support and a doctor for postnatal low mood"}
+{"id": "caring-for-parent", "title": "Caring for a sick or aging parent", "category": "family", "is_sensitive": true, "note": ""}
+{"id": "parent-aging", "title": "Watching a parent get old", "category": "family", "is_sensitive": false, "note": ""}
+{"id": "hurt-at-home", "title": "Someone at home hurts or threatens me", "category": "family", "is_sensitive": true, "note": "abuse: content is about safety and getting help, never about enduring it"}
+{"id": "lonely", "title": "I feel lonely", "category": "friendship", "is_sensitive": false, "note": ""}
+{"id": "new-city-alone", "title": "New city, no friends yet", "category": "friendship", "is_sensitive": false, "note": ""}
+{"id": "friend-betrayed-me", "title": "A friend betrayed me", "category": "friendship", "is_sensitive": false, "note": ""}
+{"id": "drifting-apart", "title": "Friends drifting apart", "category": "friendship", "is_sensitive": false, "note": ""}
+{"id": "left-out", "title": "I was left out or not invited", "category": "friendship", "is_sensitive": false, "note": ""}
+{"id": "friend-wasnt-there", "title": "A friend wasn't there when I needed them", "category": "friendship", "is_sensitive": false, "note": ""}
+{"id": "draining-friend", "title": "A friend who drains me", "category": "friendship", "is_sensitive": false, "note": ""}
+{"id": "social-anxiety", "title": "I'm anxious around people", "category": "friendship", "is_sensitive": false, "note": ""}
+{"id": "jealous-of-friends", "title": "Jealous of my friends", "category": "friendship", "is_sensitive": false, "note": ""}
+{"id": "comfort-grieving-friend", "title": "How do I support a grieving friend?", "category": "friendship", "is_sensitive": false, "note": ""}
+{"id": "death-of-parent", "title": "My mother or father died", "category": "loss", "is_sensitive": true, "note": ""}
+{"id": "death-of-grandparent", "title": "My grandparent died", "category": "loss", "is_sensitive": true, "note": ""}
+{"id": "death-of-friend", "title": "A friend died", "category": "loss", "is_sensitive": true, "note": ""}
+{"id": "death-of-partner", "title": "My partner died", "category": "loss", "is_sensitive": true, "note": ""}
+{"id": "death-of-pet", "title": "My pet died", "category": "loss", "is_sensitive": true, "note": ""}
+{"id": "sudden-death", "title": "Someone died suddenly", "category": "loss", "is_sensitive": true, "note": ""}
+{"id": "loved-one-dying", "title": "Someone I love is dying", "category": "loss", "is_sensitive": true, "note": ""}
+{"id": "guilt-after-death", "title": "Guilt after someone died", "category": "loss", "is_sensitive": true, "note": ""}
+{"id": "anniversary-of-loss", "title": "The anniversary of a loss", "category": "loss", "is_sensitive": true, "note": ""}
+{"id": "pregnancy-loss", "title": "We lost a pregnancy", "category": "loss", "is_sensitive": true, "note": "very little in the corpus fits; may drop or keep to comfort and help only"}
+{"id": "lost-home-or-things", "title": "I lost my home or things I loved", "category": "loss", "is_sensitive": true, "note": "fire, flood, theft"}
+{"id": "new-diagnosis", "title": "I got a hard diagnosis", "category": "health", "is_sensitive": true, "note": "always points to doctors"}
+{"id": "chronic-pain", "title": "Living with chronic pain", "category": "health", "is_sensitive": true, "note": "always points to doctors"}
+{"id": "chronic-illness", "title": "Living with a long term illness", "category": "health", "is_sensitive": true, "note": ""}
+{"id": "waiting-for-results", "title": "Waiting for test results", "category": "health", "is_sensitive": false, "note": ""}
+{"id": "surgery-fear", "title": "Scared of an operation", "category": "health", "is_sensitive": false, "note": ""}
+{"id": "injury-recovery", "title": "Recovering from an injury", "category": "health", "is_sensitive": false, "note": ""}
+{"id": "cant-sleep", "title": "I can't sleep, my mind won't stop", "category": "health", "is_sensitive": false, "note": "suggests a doctor if it lasts"}
+{"id": "body-image", "title": "I don't like how I look", "category": "health", "is_sensitive": true, "note": "no diet advice; points to help for eating problems"}
+{"id": "mental-health-struggle", "title": "I'm struggling with my mental health", "category": "health", "is_sensitive": true, "note": "always points to professional help first"}
+{"id": "health-anxiety", "title": "Constant worry about my health", "category": "health", "is_sensitive": false, "note": ""}
+{"id": "worry-about-future", "title": "I can't stop worrying about the future", "category": "anxiety", "is_sensitive": false, "note": ""}
+{"id": "overthinking", "title": "I overthink everything", "category": "anxiety", "is_sensitive": false, "note": ""}
+{"id": "fear-of-failure", "title": "Afraid of failing", "category": "anxiety", "is_sensitive": false, "note": ""}
+{"id": "uncertainty", "title": "I don't know what's going to happen", "category": "anxiety", "is_sensitive": false, "note": ""}
+{"id": "cant-decide", "title": "I can't make a decision", "category": "anxiety", "is_sensitive": false, "note": ""}
+{"id": "panic", "title": "I feel panic and can't calm down", "category": "anxiety", "is_sensitive": true, "note": "grounding first; points to help if it keeps happening"}
+{"id": "fear-of-judgment", "title": "Afraid of what people will think", "category": "anxiety", "is_sensitive": false, "note": ""}
+{"id": "bad-news", "title": "I just got bad news", "category": "anxiety", "is_sensitive": false, "note": ""}
+{"id": "dread-tomorrow", "title": "Dreading something tomorrow", "category": "anxiety", "is_sensitive": false, "note": ""}
+{"id": "road-rage", "title": "Furious at another driver", "category": "anger", "is_sensitive": false, "note": ""}
+{"id": "insulted", "title": "Someone insulted me", "category": "anger", "is_sensitive": false, "note": ""}
+{"id": "insulted-online", "title": "Someone was mean to me online", "category": "anger", "is_sensitive": false, "note": ""}
+{"id": "holding-grudge", "title": "I can't let go of a grudge", "category": "anger", "is_sensitive": false, "note": ""}
+{"id": "want-revenge", "title": "I want revenge", "category": "anger", "is_sensitive": false, "note": ""}
+{"id": "lost-my-temper", "title": "I lost my temper and regret it", "category": "anger", "is_sensitive": false, "note": ""}
+{"id": "defensive-when-criticized", "title": "I get defensive when criticized", "category": "anger", "is_sensitive": false, "note": ""}
+{"id": "rude-strangers", "title": "Rude strangers and bad service", "category": "anger", "is_sensitive": false, "note": ""}
+{"id": "everyone-annoys-me", "title": "Everyone gets on my nerves", "category": "anger", "is_sensitive": false, "note": ""}
+{"id": "treated-unfairly", "title": "I was treated unfairly", "category": "anger", "is_sensitive": false, "note": ""}
+{"id": "not-good-enough", "title": "I'm not good enough", "category": "self", "is_sensitive": false, "note": ""}
+{"id": "too-hard-on-myself", "title": "I'm too hard on myself", "category": "self", "is_sensitive": false, "note": ""}
+{"id": "comparing-myself", "title": "I keep comparing myself to others", "category": "self", "is_sensitive": false, "note": ""}
+{"id": "behind-in-life", "title": "Everyone my age is ahead of me", "category": "self", "is_sensitive": false, "note": ""}
+{"id": "people-pleasing", "title": "I can't say no, I always please people", "category": "self", "is_sensitive": false, "note": ""}
+{"id": "need-approval", "title": "I need likes and approval", "category": "self", "is_sensitive": false, "note": ""}
+{"id": "feel-invisible", "title": "Nobody notices me", "category": "self", "is_sensitive": false, "note": ""}
+{"id": "low-confidence", "title": "I have no confidence", "category": "self", "is_sensitive": false, "note": ""}
+{"id": "mocked-for-changing", "title": "People mock me for trying to improve", "category": "self", "is_sensitive": false, "note": ""}
+{"id": "regret-past", "title": "I regret choices I made", "category": "self", "is_sensitive": false, "note": ""}
+{"id": "ashamed", "title": "Ashamed of something I did", "category": "self", "is_sensitive": false, "note": ""}
+{"id": "lied-guilt", "title": "I feel guilty for lying", "category": "self", "is_sensitive": false, "note": ""}
+{"id": "want-to-be-better", "title": "I want to become a better person", "category": "self", "is_sensitive": false, "note": ""}
+{"id": "relapsed", "title": "I relapsed into a bad habit", "category": "habits", "is_sensitive": false, "note": ""}
+{"id": "drinking-too-much", "title": "I drink too much", "category": "habits", "is_sensitive": true, "note": "points to help; never 'just use willpower'"}
+{"id": "phone-addiction", "title": "I spend hours on my phone", "category": "habits", "is_sensitive": false, "note": ""}
+{"id": "cant-get-up", "title": "I can't get out of bed in the morning", "category": "habits", "is_sensitive": false, "note": "low mood that lasts: points to a doctor"}
+{"id": "angry-at-my-laziness", "title": "Angry at myself for being lazy", "category": "habits", "is_sensitive": false, "note": ""}
+{"id": "no-routine", "title": "I can't stick to a routine", "category": "habits", "is_sensitive": false, "note": ""}
+{"id": "give-up-easily", "title": "I give up too easily", "category": "habits", "is_sensitive": false, "note": ""}
+{"id": "starting-is-hard", "title": "Starting is the hardest part", "category": "habits", "is_sensitive": false, "note": ""}
+{"id": "impulse-buying", "title": "I keep buying things I don't need", "category": "habits", "is_sensitive": false, "note": ""}
+{"id": "cravings", "title": "I can't resist cravings", "category": "habits", "is_sensitive": false, "note": ""}
+{"id": "money-worries", "title": "Worried about money or debt", "category": "money", "is_sensitive": false, "note": "points to practical help like debt advice"}
+{"id": "never-enough", "title": "I always want more money", "category": "money", "is_sensitive": false, "note": ""}
+{"id": "envy-the-rich", "title": "Envy of people with more money", "category": "money", "is_sensitive": false, "note": ""}
+{"id": "ashamed-of-poverty", "title": "Ashamed of not having much", "category": "money", "is_sensitive": false, "note": ""}
+{"id": "lost-money", "title": "I lost money", "category": "money", "is_sensitive": false, "note": ""}
+{"id": "sudden-change", "title": "My life changed suddenly", "category": "change", "is_sensitive": false, "note": ""}
+{"id": "moving-away", "title": "Moving to a new city or country", "category": "change", "is_sensitive": false, "note": ""}
+{"id": "new-chapter", "title": "Scared of a new chapter", "category": "change", "is_sensitive": false, "note": ""}
+{"id": "plans-fell-apart", "title": "My plans fell apart", "category": "change", "is_sensitive": false, "note": ""}
+{"id": "life-not-as-planned", "title": "My life isn't what I planned", "category": "change", "is_sensitive": false, "note": ""}
+{"id": "bad-luck", "title": "Everything goes wrong for me", "category": "change", "is_sensitive": false, "note": ""}
+{"id": "stuck-in-a-rut", "title": "Stuck in a rut", "category": "change", "is_sensitive": false, "note": ""}
+{"id": "retirement", "title": "Retiring and not sure what's next", "category": "change", "is_sensitive": false, "note": ""}
+{"id": "no-purpose", "title": "I don't know my purpose", "category": "purpose", "is_sensitive": false, "note": ""}
+{"id": "wasting-life", "title": "I feel like I'm wasting my life", "category": "purpose", "is_sensitive": false, "note": ""}
+{"id": "waiting-to-live", "title": "Waiting for my real life to start", "category": "purpose", "is_sensitive": false, "note": ""}
+{"id": "too-busy", "title": "Too busy to breathe", "category": "purpose", "is_sensitive": false, "note": ""}
+{"id": "time-flying", "title": "Time is flying by", "category": "purpose", "is_sensitive": false, "note": ""}
+{"id": "bored", "title": "I'm bored with everything", "category": "purpose", "is_sensitive": false, "note": ""}
+{"id": "midlife-questions", "title": "Questioning my life in midlife", "category": "purpose", "is_sensitive": false, "note": ""}
+{"id": "success-to-head", "title": "Success is going to my head", "category": "success", "is_sensitive": false, "note": ""}
+{"id": "not-appreciated", "title": "Nobody thanks me or appreciates what I do", "category": "success", "is_sensitive": false, "note": ""}
+{"id": "afraid-to-lose-it", "title": "Afraid of losing what I have", "category": "success", "is_sensitive": false, "note": ""}
+{"id": "empty-after-goal", "title": "I reached my goal and feel empty", "category": "success", "is_sensitive": false, "note": ""}
+{"id": "work-criticized", "title": "Someone criticized my creative work", "category": "success", "is_sensitive": false, "note": ""}
+{"id": "getting-older", "title": "I'm getting older and it scares me", "category": "aging-death", "is_sensitive": false, "note": ""}
+{"id": "milestone-birthday", "title": "A milestone birthday got me down", "category": "aging-death", "is_sensitive": false, "note": ""}
+{"id": "fear-of-death", "title": "I'm afraid of dying", "category": "aging-death", "is_sensitive": false, "note": "not suicidal thoughts; those go to the crisis screen"}
+{"id": "thinking-about-mortality", "title": "Thinking a lot about mortality", "category": "aging-death", "is_sensitive": false, "note": ""}
+{"id": "news-overwhelm", "title": "The news makes me anxious or angry", "category": "world", "is_sensitive": false, "note": ""}
+{"id": "world-unfair", "title": "The world feels unfair", "category": "world", "is_sensitive": false, "note": ""}
+{"id": "feel-powerless", "title": "I feel powerless to change things", "category": "world", "is_sensitive": false, "note": ""}
+{"id": "climate-anxiety", "title": "Worried about climate change", "category": "world", "is_sensitive": false, "note": ""}
