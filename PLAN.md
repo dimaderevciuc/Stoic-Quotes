@@ -172,7 +172,7 @@ class Quote(BaseModel):
    - The tokenizer vocabulary and rules (from `tokenizer.json`).
    - The token vector matrix quantized to int8 with one float32 scale per row.
    - The quote and situation embeddings (int8 plus scale), stored in `content.db` or a binary file.
-   - Report the total size. Target: under 12 MB.
+   - Report the total size. Budget: about 30 MB (raised by Dima so a larger, more accurate model can be used). Compare the candidate potion models on recall@5 and pick the best one that fits.
 3. Prune the vocabulary only if it is safe (measure the quality impact first).
 4. Create `data/golden/parity.json`: 30 test sentences with the expected top 5 quote IDs and the cosine scores from Python.
 5. Dart side in `lib/core/embedding/`:
@@ -239,7 +239,7 @@ class Situation(BaseModel):
 1. Implement the architecture from Section 3 (Riverpod, go_router, Drift).
 2. **Situation screen (home):** text field, then results:
    - The matched situation title, if any.
-   - 3 to 5 quote cards: quote, author, citation, explanation, "how it applies" text, expand for context.
+   - 3 to 5 quote cards. Order on each card (Dima's decision): first the plain modern explanation as the headline, then the original quote it comes from with author and citation, then "how it applies". Tapping expands the full passage for context. The aim is that people get the perspective without struggling with old English.
    - The exercise.
    - Favorite and share buttons on each card.
 3. **Explore screen:** a persistent shuffle bag (seen IDs stored in `user.db`), swipe or next/previous, favorite button.
