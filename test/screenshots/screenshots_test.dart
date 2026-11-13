@@ -48,6 +48,7 @@ void main() {
     tester.view.devicePixelRatio = 2.75;
     addTearDown(tester.view.reset);
     final repo = UserRepository(openTestUserDatabase());
+    await tester.runAsync(repo.markIntroSeen);
     await tester.pumpWidget(
       ProviderScope(
         overrides: [

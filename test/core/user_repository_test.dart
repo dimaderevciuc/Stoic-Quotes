@@ -56,4 +56,20 @@ void main() {
       throwsA(anything),
     );
   });
+
+  test('focus picks keep their order; the intro is seen once marked', () async {
+    expect(await repo.focusAreaIds(), isEmpty);
+    expect(await repo.introSeen(), isFalse);
+    await repo.setFocusAreaIds(['loss', 'pushing-further', 'calm']);
+    expect(await repo.focusAreaIds(), ['loss', 'pushing-further', 'calm']);
+    expect(await repo.watchFocusAreaIds().first, [
+      'loss',
+      'pushing-further',
+      'calm',
+    ]);
+    await repo.setFocusAreaIds([]);
+    expect(await repo.focusAreaIds(), isEmpty);
+    await repo.markIntroSeen();
+    expect(await repo.introSeen(), isTrue);
+  });
 }

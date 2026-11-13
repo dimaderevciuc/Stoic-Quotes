@@ -7,6 +7,7 @@ import 'package:go_router/go_router.dart';
 
 import '../../app/providers.dart';
 import '../../app/theme.dart';
+import '../../core/focus/focus_areas.dart';
 import '../../core/reflection_service.dart';
 import '../../core/safety/crisis_detector.dart';
 import '../common/quote_card.dart';
@@ -20,13 +21,8 @@ import 'exercise_card.dart';
 class SituationScreen extends ConsumerStatefulWidget {
   const SituationScreen({super.key});
 
-  static const examples = [
-    'I keep procrastinating',
-    "I'm anxious about the future",
-    'Someone was rude to me',
-    'I miss someone I lost',
-    "I'm not good enough",
-  ];
+  /// Suggestions when the person has no focus picks.
+  static const examples = ['I keep procrastinating', "I'm not good enough"];
 
   @override
   ConsumerState<SituationScreen> createState() => _SituationScreenState();
@@ -99,6 +95,14 @@ class _SituationScreenState extends ConsumerState<SituationScreen> {
     final theme = Theme.of(context);
     final modelReady = ref.watch(reflectionFinderProvider).hasValue;
     final result = _result;
+    // Suggestions follow the focus picks; the defaults otherwise.
+    final content = ref.watch(contentProvider).value;
+    final picks = resolveFocusAreas(
+      ref.watch(focusAreaIdsProvider).value ?? const [],
+    );
+    final suggestions = content == null
+        ? SituationScreen.examples
+        : suggestionTitles(picks, content, fallback: SituationScreen.examples);
     return Scaffold(
       appBar: AppBar(
         title: const Text('Stoic Quotes'),
@@ -118,8 +122,7 @@ class _SituationScreenState extends ConsumerState<SituationScreen> {
             Text("What's on your mind?", style: theme.textTheme.headlineSmall),
             const SizedBox(height: 6),
             Text(
-              'Describe what you are going through in your own words. '
-              'Nothing you type is saved or leaves your phone.',
+              'Describe what you are going through in your own words. ',
               style: theme.textTheme.bodyMedium?.copyWith(
                 color: AppColors.textMuted,
               ),
@@ -133,9 +136,7 @@ class _SituationScreenState extends ConsumerState<SituationScreen> {
               maxLength: 1000,
               textCapitalization: TextCapitalization.sentences,
               textInputAction: TextInputAction.newline,
-              decoration: const InputDecoration(
-                hintText: 'For example: I keep putting off my thesis and feel guilty about it',
-              ),
+              decoration: const InputDecoration(hintText: 'Type here...'),
               onChanged: (_) => setState(() {}),
             ),
             // One row that scrolls sideways keeps the Reflect button in view.
@@ -144,7 +145,7 @@ class _SituationScreenState extends ConsumerState<SituationScreen> {
               clipBehavior: Clip.none,
               child: Row(
                 children: [
-                  for (final example in SituationScreen.examples)
+                  for (final example in suggestions)
                     Padding(
                       padding: const EdgeInsets.only(right: 8),
                       child: ActionChip(

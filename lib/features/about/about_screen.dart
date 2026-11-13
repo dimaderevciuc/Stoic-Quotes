@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -65,12 +66,29 @@ class AboutScreen extends ConsumerWidget {
               'may help, each with a plain explanation and a small practice.',
               style: muted,
             ),
+            const SizedBox(height: 8),
+            Wrap(
+              spacing: 8,
+              runSpacing: 4,
+              children: [
+                OutlinedButton.icon(
+                  onPressed: () => context.push('/focus'),
+                  icon: const Icon(Icons.tune, size: 18),
+                  label: const Text('Your focus'),
+                ),
+                OutlinedButton.icon(
+                  onPressed: () => context.push('/intro?again=1'),
+                  icon: const Icon(Icons.replay, size: 18),
+                  label: const Text('View intro again'),
+                ),
+              ],
+            ),
           ]),
           section('Privacy', icon: Icons.lock_outline, [
             Text(
               'No data leaves your device. There is no account, no internet connection and no '
               'tracking. What you type is used once to find quotes and is never saved. '
-              'Your favorites are stored encrypted on your phone.',
+              'Your favorites and focus picks are stored encrypted on your phone.',
               style: muted,
             ),
           ]),

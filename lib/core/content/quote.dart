@@ -13,6 +13,7 @@ class Quote {
     required this.context,
     required this.explanation,
     required this.themes,
+    this.needs = const [],
   });
 
   factory Quote.fromJson(Map<String, dynamic> json) => Quote(
@@ -26,6 +27,9 @@ class Quote {
     context: json['context'] as String,
     explanation: json['explanation'] as String,
     themes: [for (final t in json['themes'] as List<dynamic>) t as String],
+    needs: [
+      for (final n in json['needs'] as List<dynamic>? ?? const []) n as String,
+    ],
   );
 
   final String id;
@@ -48,6 +52,9 @@ class Quote {
   /// One to three plain sentences: what it means today. Shown first.
   final String explanation;
   final List<String> themes;
+
+  /// What the quote offers the reader, e.g. calm, courage, comfort.
+  final List<String> needs;
 
   /// "Meditations 4.3 · tr. George Long, 1862" (no dashes, house style).
   String get sourceLine {

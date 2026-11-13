@@ -68,5 +68,30 @@ class UserRepository {
       .into(_db.settings)
       .insertOnConflictUpdate(SettingsCompanion.insert(key: key, value: value));
 
+  Stream<String?> watchSetting(String key) => (_db.select(
+    _db.settings,
+  )..where((s) => s.key.equals(key))).watchSingleOrNull().map((s) => s?.value);
+
+  // Focus picks: ids from focus_areas.dart, comma separated, in pick order.
+  static const focusKey = 'focus_areas';
+  static const introSeenKey = 'intro_seen';
+
+  Stream<List<String>> watchFocusAreaIds() =>
+      watchSetting(focusKey).map(_splitIds);
+
+  Future<List<String>> focusAreaIds() async =>
+      _splitIds(await setting(focusKey));
+
+  Future<void> setFocusAreaIds(List<String> ids) =>
+      setSetting(focusKey, ids.join(','));
+
+  static List<String> _splitIds(String? v) =>
+      v == null || v.isEmpty ? const [] : v.split(',');
+
+  // The first-launch introduction.
+  Future<bool> introSeen() async => await setting(introSeenKey) == '1';
+
+  Future<void> markIntroSeen() => setSetting(introSeenKey, '1');
+
   Future<void> close() => _db.close();
 }

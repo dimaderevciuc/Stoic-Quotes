@@ -4,7 +4,7 @@ description: "Stoic Quotes: private, offline Stoic reflections for hard moments.
 publish_to: 'none'
 
 # version: <versionName>+<versionCode>. Bump for every test build, or Android refuses to update.
-version: 1.1.0+2
+version: 1.2.0+3
 
 environment:
   sdk: ^3.13.0

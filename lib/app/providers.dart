@@ -57,3 +57,9 @@ final legacyFavoritesProvider = StreamProvider<List<LegacyFavorite>>((
   final repo = await ref.watch(userRepositoryProvider.future);
   yield* repo.watchLegacyFavorites();
 });
+
+/// The person's focus picks (ids from focus_areas.dart), in pick order.
+final focusAreaIdsProvider = StreamProvider<List<String>>((ref) async* {
+  final repo = await ref.watch(userRepositoryProvider.future);
+  yield* repo.watchFocusAreaIds();
+});

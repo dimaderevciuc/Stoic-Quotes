@@ -16,9 +16,11 @@ void main() {
   late UserRepository repo;
   late FakeReflectionFinder finder;
 
-  setUp(() {
+  setUp(() async {
     repo = UserRepository(openTestUserDatabase());
     finder = FakeReflectionFinder(content);
+    // The first-launch intro has its own tests (focus_test.dart).
+    await repo.markIntroSeen();
   });
 
   Future<void> pumpApp(WidgetTester tester) async {
