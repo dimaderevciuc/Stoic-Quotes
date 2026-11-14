@@ -1,8 +1,20 @@
+import java.io.FileInputStream
+import java.util.Properties
+
 plugins {
     id("com.android.application")
     // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id("dev.flutter.flutter-gradle-plugin")
 }
+
+// Release signing key. android/key.properties (never committed) points to the
+// keystore, which lives outside the repo (~/.keystores). Every update must be
+// signed with this same key, or phones refuse it: back it up.
+val keystoreProperties = Properties().apply {
+    val file = rootProject.file("key.properties")
+    if (file.exists()) FileInputStream(file).use { load(it) }
+}
+val hasReleaseKey = keystoreProperties.getProperty("storeFile") != null
 
 android {
     namespace = "com.dimaderevciuc.stoicquotes"
@@ -38,11 +50,27 @@ android {
         }
     }
 
+    signingConfigs {
+        if (hasReleaseKey) {
+            create("release") {
+                storeFile = file(keystoreProperties.getProperty("storeFile"))
+                storePassword = keystoreProperties.getProperty("storePassword")
+                keyAlias = keystoreProperties.getProperty("keyAlias")
+                keyPassword = keystoreProperties.getProperty("keyPassword")
+            }
+        }
+    }
+
     buildTypes {
         release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
-            signingConfig = signingConfigs.getByName("debug")
+            // Without key.properties (CI, other machines) release builds use the
+            // debug key so they still build. Never share those APKs.
+            signingConfig = if (hasReleaseKey) {
+                signingConfigs.getByName("release")
+            } else {
+                logger.warn("No android/key.properties: release APK is signed with the DEBUG key. Do not share it.")
+                signingConfigs.getByName("debug")
+            }
             // R8 must not rename ONNX Runtime's JNI-facing classes (see proguard-rules.pro).
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
